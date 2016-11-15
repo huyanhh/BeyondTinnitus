@@ -13,6 +13,8 @@
 		9F67C9FD1DDBB1F600BFBACB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F67C9FC1DDBB1F600BFBACB /* Assets.xcassets */; };
 		9F67CA001DDBB1F600BFBACB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F67C9FE1DDBB1F600BFBACB /* LaunchScreen.storyboard */; };
 		9F67CA0B1DDBB1F600BFBACB /* BeyondTinnitusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F67CA0A1DDBB1F600BFBACB /* BeyondTinnitusTests.swift */; };
+		9F67CA161DDBB33E00BFBACB /* FMSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F67CA151DDBB33E00BFBACB /* FMSynthesizer.swift */; };
+		9F67CA181DDBB34B00BFBACB /* ToneOutputInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F67CA171DDBB34B00BFBACB /* ToneOutputInput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		9F67CA061DDBB1F600BFBACB /* BeyondTinnitusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeyondTinnitusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F67CA0A1DDBB1F600BFBACB /* BeyondTinnitusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeyondTinnitusTests.swift; sourceTree = "<group>"; };
 		9F67CA0C1DDBB1F600BFBACB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F67CA151DDBB33E00BFBACB /* FMSynthesizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMSynthesizer.swift; sourceTree = "<group>"; };
+		9F67CA171DDBB34B00BFBACB /* ToneOutputInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToneOutputInput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,8 @@
 				9F67C9F91DDBB1F600BFBACB /* Main.storyboard */,
 				9F67C9FC1DDBB1F600BFBACB /* Assets.xcassets */,
 				9F67C9FE1DDBB1F600BFBACB /* LaunchScreen.storyboard */,
+				9F67CA151DDBB33E00BFBACB /* FMSynthesizer.swift */,
+				9F67CA171DDBB34B00BFBACB /* ToneOutputInput.swift */,
 				9F67CA011DDBB1F600BFBACB /* Info.plist */,
 			);
 			path = BeyondTinnitus;
@@ -203,6 +209,8 @@
 			files = (
 				9F67C9F81DDBB1F600BFBACB /* ViewController.swift in Sources */,
 				9F67C9F61DDBB1F600BFBACB /* AppDelegate.swift in Sources */,
+				9F67CA161DDBB33E00BFBACB /* FMSynthesizer.swift in Sources */,
+				9F67CA181DDBB34B00BFBACB /* ToneOutputInput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
