@@ -15,7 +15,6 @@ class LoginViewController: UIViewController {
         guard let controller = self.storyboard?.instantiateViewController(withIdentifier: "main") as? UINavigationController
             else { fatalError() }
         present(controller, animated: true, completion: nil)
-        
     }
     
     override func viewDidLoad() {

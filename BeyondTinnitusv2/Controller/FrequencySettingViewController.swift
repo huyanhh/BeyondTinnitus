@@ -10,14 +10,20 @@ import UIKit
 import AVFoundation
 
 class FrequencySettingViewController: UIViewController {
+    @IBOutlet weak var otherSlider: UISlider!
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var label: UILabel!
 
     var engine: AVAudioEngine!
     var tone: AVTonePlayerUnit!
+    var tone2: AVTonePlayerUnit!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        otherSlider.minimumValue = -1.0
+        otherSlider.maximumValue = 1.0
+        otherSlider.value = 0.0
 
         tone = AVTonePlayerUnit()
         label.text = String(format: "%.1f", tone.frequency)
@@ -38,10 +44,16 @@ class FrequencySettingViewController: UIViewController {
     }
     
     @IBAction func sliderChanged(sender: UISlider) {
-        let freq = 440.0 * pow(2.0, Double(slider.value))
+        let freq = 440.0 * pow(2.0, Double(sender.value))
         tone.frequency = freq
         label.text = String(format: "%.1f", freq)
     }
+    
+    @IBAction func otherSliderChanged(_ sender: UISlider) {
+//        engine.mainMixerNode.pan = sender.value
+        tone.pan = sender.value
+    }
+    
     
     @IBAction func togglePlay(sender: UIButton) {
         if tone.isPlaying {
@@ -56,14 +68,19 @@ class FrequencySettingViewController: UIViewController {
         }
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let controller = segue.destination as? VolumeAdjustViewController
+        controller?.tone = tone
+        controller?.engine = engine
+        print("switching")
+        print(engine)
+        
+        
     }
-    */
+ 
 
 }

@@ -66,7 +66,7 @@
                                     <constraint firstItem="f18-Kh-wz6" firstAttribute="height" secondItem="b4L-WI-m1c" secondAttribute="height" id="joc-8l-8He"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQ6-Hb-o0g">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQ6-Hb-o0g" customClass="WideButton" customModule="BeyondTinnitusv2" customModuleProvider="target">
                                 <rect key="frame" x="32.5" y="558.5" width="311" height="48"/>
                                 <color key="backgroundColor" red="0.12941176469999999" green="0.58823529409999997" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -130,7 +130,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PgJ-2Q-PrQ">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PgJ-2Q-PrQ" customClass="BeyondView" customModule="BeyondTinnitusv2" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="209" width="375" height="458"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set your Tinnitus Frequency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eiu-Jv-mrG">
@@ -141,7 +141,7 @@
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="5V4-oz-TYu">
                                         <rect key="frame" x="44" y="187" width="287" height="31"/>
-                                        <color key="tintColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.45882352941176469" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="sliderChangedWithSender:" destination="SPI-Wa-uGD" eventType="valueChanged" id="wOU-VK-2sq"/>
                                         </connections>
@@ -164,7 +164,9 @@
                                             <constraint firstAttribute="height" constant="36" id="M3f-zS-O73"/>
                                             <constraint firstAttribute="width" constant="36" id="srm-NN-tvj"/>
                                         </constraints>
-                                        <state key="normal" title="Next"/>
+                                        <state key="normal" title="Next">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
                                             <segue destination="IvN-PJ-Xch" kind="show" id="piM-zG-5mq"/>
                                         </connections>
@@ -193,6 +195,13 @@
                                     <action selector="togglePlayWithSender:" destination="SPI-Wa-uGD" eventType="touchUpInside" id="sOW-Es-h4x"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="S7C-TX-gbG">
+                                <rect key="frame" x="33" y="95" width="288" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="otherSliderChanged:" destination="SPI-Wa-uGD" eventType="valueChanged" id="27p-V0-fok"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -209,6 +218,7 @@
                     <navigationItem key="navigationItem" title="1 of 4" id="WaR-so-h6P"/>
                     <connections>
                         <outlet property="label" destination="D9W-fI-E8X" id="zWk-oU-5tB"/>
+                        <outlet property="otherSlider" destination="S7C-TX-gbG" id="wzE-GQ-R00"/>
                         <outlet property="slider" destination="5V4-oz-TYu" id="vmM-NW-dTi"/>
                     </connections>
                 </viewController>
@@ -228,14 +238,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="5Mv-Hx-xal">
-                                <rect key="frame" x="128" y="244" width="118" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="5Mv-Hx-xal">
+                                <rect key="frame" x="30" y="299" width="315" height="31"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="yb4-Gp-vCX" eventType="valueChanged" id="UTE-a6-Vpl"/>
+                                </connections>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ros-CY-udj">
-                                <rect key="frame" x="53" y="584" width="269" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ros-CY-udj" customClass="WideButton" customModule="BeyondTinnitusv2" customModuleProvider="target">
+                                <rect key="frame" x="32" y="603" width="311" height="48"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="9hu-WU-vIT"/>
+                                </constraints>
                                 <state key="normal" title="Generate Sound Therapy">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -243,29 +257,45 @@
                                     <segue destination="uQG-fa-xfA" kind="show" id="dH3-Yr-mpX"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EVU-no-u7L">
-                                <rect key="frame" x="0.0" y="64" width="375" height="160"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EVU-no-u7L" customClass="BeyondView" customModule="BeyondTinnitusv2" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="175"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Balance the Sound" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m3w-G5-eO4">
                                         <rect key="frame" x="115" y="54" width="144" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="nVD-V7-fc6"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ros-CY-udj" firstAttribute="centerX" secondItem="sdI-Tc-6xH" secondAttribute="centerX" id="1bo-YC-4Ik"/>
+                            <constraint firstItem="EVU-no-u7L" firstAttribute="top" secondItem="Yqk-JJ-Efp" secondAttribute="bottom" id="HmV-m7-hld"/>
+                            <constraint firstItem="Rxh-9j-Xv7" firstAttribute="top" secondItem="Ros-CY-udj" secondAttribute="bottom" constant="16" id="Jhh-Ep-kre"/>
+                            <constraint firstItem="EVU-no-u7L" firstAttribute="leading" secondItem="sdI-Tc-6xH" secondAttribute="leading" id="VMm-c7-Koe"/>
+                            <constraint firstItem="Ros-CY-udj" firstAttribute="leading" secondItem="sdI-Tc-6xH" secondAttribute="leadingMargin" constant="16" id="eqC-n1-dUa"/>
+                            <constraint firstAttribute="trailing" secondItem="EVU-no-u7L" secondAttribute="trailing" id="qOd-d3-lvG"/>
+                            <constraint firstItem="5Mv-Hx-xal" firstAttribute="top" secondItem="EVU-no-u7L" secondAttribute="bottom" constant="60" id="t95-5k-kRd"/>
+                            <constraint firstItem="Ros-CY-udj" firstAttribute="width" secondItem="5Mv-Hx-xal" secondAttribute="width" id="y1C-69-GYf"/>
+                            <constraint firstItem="5Mv-Hx-xal" firstAttribute="centerX" secondItem="sdI-Tc-6xH" secondAttribute="centerX" id="yxZ-Zu-e1N"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="slider" destination="5Mv-Hx-xal" id="3dv-yL-hQo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vlc-BP-vKB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="461.60000000000002" y="798.35082458770626"/>
         </scene>
-        <!--Dashboard View Controller-->
+        <!--Beyond Tinnitus-->
         <scene sceneID="huU-yS-2IU">
             <objects>
                 <viewController id="uQG-fa-xfA" customClass="DashboardViewController" customModule="BeyondTinnitusv2" customModuleProvider="target" sceneMemberID="viewController">
@@ -277,20 +307,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BeyondTinnitus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgM-gc-ARP">
-                                <rect key="frame" x="128" y="87" width="119" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3To-cX-dLf">
+                                <rect key="frame" x="166" y="157" width="32" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rhN-zT-2Gf">
+                                <rect key="frame" x="32" y="220" width="311" height="355"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="s42-Sw-fBP">
+                                        <rect key="frame" x="0.0" y="28" width="311" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="s42-Sw-fBP" id="wgf-GR-3hw">
+                                            <rect key="frame" x="0.0" y="0.0" width="311" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TYu-0k-j06" firstAttribute="top" secondItem="rhN-zT-2Gf" secondAttribute="bottom" constant="48" id="5Mt-Iz-1sb"/>
+                            <constraint firstItem="rhN-zT-2Gf" firstAttribute="top" secondItem="3To-cX-dLf" secondAttribute="bottom" constant="42" id="6sn-mb-GHs"/>
+                            <constraint firstItem="rhN-zT-2Gf" firstAttribute="centerX" secondItem="d38-kp-kVr" secondAttribute="centerX" id="70v-fl-lYa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3To-cX-dLf" secondAttribute="trailing" constant="161" id="7Ac-33-FO9"/>
+                            <constraint firstItem="3To-cX-dLf" firstAttribute="leading" secondItem="d38-kp-kVr" secondAttribute="leadingMargin" constant="150" id="KEF-MN-nyN"/>
+                            <constraint firstItem="rhN-zT-2Gf" firstAttribute="leading" secondItem="d38-kp-kVr" secondAttribute="leadingMargin" constant="16" id="ns8-hb-SSw"/>
+                            <constraint firstItem="3To-cX-dLf" firstAttribute="top" secondItem="DTd-kq-Upg" secondAttribute="bottom" constant="93" id="uot-3s-xS8"/>
+                        </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Beyond Tinnitus" id="3e1-k7-aLz"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="rhN-zT-2Gf" id="bbz-Io-YaA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fiS-J5-qQ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1326" y="799"/>
+            <point key="canvasLocation" x="1325.5999999999999" y="798.35082458770626"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qIi-aB-lM6">
@@ -322,7 +381,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1jn-p9-QnD">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1jn-p9-QnD" customClass="BeyondView" customModule="BeyondTinnitusv2" customModuleProvider="target">
                                 <rect key="frame" x="-4" y="64" width="382" height="405"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -349,11 +408,11 @@
                                         <rect key="frame" x="86" y="42" width="210" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sla-S9-aDX">
                                 <rect key="frame" x="171" y="609" width="32" height="30"/>
