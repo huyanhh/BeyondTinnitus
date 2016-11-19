@@ -27,6 +27,7 @@ extension UIColor {
     
     enum Beyond: String {
         case teal   = "00D8C5" //Robin Egg Blue
+        case babyBlue = "75FFFF"
     }
     
     class func beyond(color: Beyond) -> UIColor { return colorFromHexString(str: color.rawValue) }
