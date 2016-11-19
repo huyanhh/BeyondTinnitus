@@ -19,6 +19,7 @@
 		3B9F70961DE0C13A00D310DB /* BeyondUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F70951DE0C13A00D310DB /* BeyondUIColor.swift */; };
 		3B9F70981DE0C25D00D310DB /* AVTonePlayerUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F70971DE0C25D00D310DB /* AVTonePlayerUnit.swift */; };
 		3B9F709A1DE0C5E200D310DB /* MKTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F70991DE0C5E200D310DB /* MKTextField.swift */; };
+		3B9F709C1DE0CB3100D310DB /* BeyondUIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F709B1DE0CB3100D310DB /* BeyondUIFont.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		3B9F70951DE0C13A00D310DB /* BeyondUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BeyondUIColor.swift; path = Utility/BeyondUIColor.swift; sourceTree = "<group>"; };
 		3B9F70971DE0C25D00D310DB /* AVTonePlayerUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AVTonePlayerUnit.swift; path = Utility/AVTonePlayerUnit.swift; sourceTree = "<group>"; };
 		3B9F70991DE0C5E200D310DB /* MKTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MKTextField.swift; path = View/MKTextField.swift; sourceTree = "<group>"; };
+		3B9F709B1DE0CB3100D310DB /* BeyondUIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BeyondUIFont.swift; path = Utility/BeyondUIFont.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				3B9F70951DE0C13A00D310DB /* BeyondUIColor.swift */,
 				3B9F70971DE0C25D00D310DB /* AVTonePlayerUnit.swift */,
 				3B9F70991DE0C5E200D310DB /* MKTextField.swift */,
+				3B9F709B1DE0CB3100D310DB /* BeyondUIFont.swift */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B9F709A1DE0C5E200D310DB /* MKTextField.swift in Sources */,
+				3B9F709C1DE0CB3100D310DB /* BeyondUIFont.swift in Sources */,
 				3B9F708C1DE0C08100D310DB /* FrequencySettingViewController.swift in Sources */,
 				3B9F708A1DE0C05300D310DB /* LoginViewController.swift in Sources */,
 				3B9F708F1DE0C09B00D310DB /* VolumeAdjustViewController.swift in Sources */,
@@ -362,6 +366,7 @@
 				3B9F70831DE0BE1300D310DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
