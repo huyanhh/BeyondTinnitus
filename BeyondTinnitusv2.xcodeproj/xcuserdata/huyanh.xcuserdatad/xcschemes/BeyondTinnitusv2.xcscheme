@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9F67C9F11DDBB1F500BFBACB"
-               BuildableName = "BeyondTinnitus.app"
-               BlueprintName = "BeyondTinnitus"
-               ReferencedContainer = "container:BeyondTinnitus.xcodeproj">
+               BlueprintIdentifier = "3B9F706E1DE0BE1300D310DB"
+               BuildableName = "BeyondTinnitusv2.app"
+               BlueprintName = "BeyondTinnitusv2"
+               ReferencedContainer = "container:BeyondTinnitusv2.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,24 +28,14 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9F67CA051DDBB1F600BFBACB"
-               BuildableName = "BeyondTinnitusTests.xctest"
-               BlueprintName = "BeyondTinnitusTests"
-               ReferencedContainer = "container:BeyondTinnitus.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9F67C9F11DDBB1F500BFBACB"
-            BuildableName = "BeyondTinnitus.app"
-            BlueprintName = "BeyondTinnitus"
-            ReferencedContainer = "container:BeyondTinnitus.xcodeproj">
+            BlueprintIdentifier = "3B9F706E1DE0BE1300D310DB"
+            BuildableName = "BeyondTinnitusv2.app"
+            BlueprintName = "BeyondTinnitusv2"
+            ReferencedContainer = "container:BeyondTinnitusv2.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -65,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9F67C9F11DDBB1F500BFBACB"
-            BuildableName = "BeyondTinnitus.app"
-            BlueprintName = "BeyondTinnitus"
-            ReferencedContainer = "container:BeyondTinnitus.xcodeproj">
+            BlueprintIdentifier = "3B9F706E1DE0BE1300D310DB"
+            BuildableName = "BeyondTinnitusv2.app"
+            BlueprintName = "BeyondTinnitusv2"
+            ReferencedContainer = "container:BeyondTinnitusv2.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -84,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9F67C9F11DDBB1F500BFBACB"
-            BuildableName = "BeyondTinnitus.app"
-            BlueprintName = "BeyondTinnitus"
-            ReferencedContainer = "container:BeyondTinnitus.xcodeproj">
+            BlueprintIdentifier = "3B9F706E1DE0BE1300D310DB"
+            BuildableName = "BeyondTinnitusv2.app"
+            BlueprintName = "BeyondTinnitusv2"
+            ReferencedContainer = "container:BeyondTinnitusv2.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>BeyondTinnitus.xcscheme</key>
+		<key>BeyondTinnitusv2.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>9F67C9F11DDBB1F500BFBACB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9F67CA051DDBB1F600BFBACB</key>
+		<key>3B9F706E1DE0BE1300D310DB</key>
 		<dict>
 			<key>primary</key>
 			<true/>

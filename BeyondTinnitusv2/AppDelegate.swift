@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  BeyondTinnitus
+//  BeyondTinnitusv2
 //
-//  Created by Vincent Gentile on 11/15/16.
-//  Copyright © 2016 Vincent Gentile. All rights reserved.
+//  Created by Huyanh Hoang on 2016. 11. 19..
+//  Copyright © 2016년 teamMedApp. All rights reserved.
 //
 
 import UIKit
@@ -17,7 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
-        //hello
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
