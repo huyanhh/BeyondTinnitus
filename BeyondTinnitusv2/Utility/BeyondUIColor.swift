@@ -18,7 +18,7 @@ extension UIColor {
     
     class func colorFromHexString(str: String) -> UIColor {
         var s = str
-//        if s.hasPrefix("#") { s = s.substring(from: s.startIndex.successor()) }
+        if s.hasPrefix("#") { s = s.substring(from: s.index(after: s.startIndex)) }
         let scanner = Scanner(string: s)
         var hexnum: UInt32 = 0
         if scanner.scanHexInt32(&hexnum) { return UIColor.colorWithRGBHex(hex: hexnum) }

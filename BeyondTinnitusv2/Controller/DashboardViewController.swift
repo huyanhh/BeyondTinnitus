@@ -45,9 +45,8 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = UITableViewCell()
         // We do [row][section] for now because we only have one section
         
-//        if indexPath.row == 0 {
-            cell.textLabel?.text = rowData[indexPath.row][indexPath.section]
-//        }
+
+        cell.textLabel?.text = rowData[indexPath.row][indexPath.section]
         
         return cell
     }

@@ -71,15 +71,10 @@ class FrequencySettingViewController: UIViewController {
     
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let controller = segue.destination as? VolumeAdjustViewController
         controller?.tone = tone
         controller?.engine = engine
-        print("switching")
-        print(engine)
-        
-        
     }
  
 

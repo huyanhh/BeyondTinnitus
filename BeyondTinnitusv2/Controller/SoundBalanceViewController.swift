@@ -28,9 +28,6 @@ class SoundBalanceViewController: UIViewController {
     
     @IBAction func sliderChanged(_ sender: UISlider) {
         engine.mainMixerNode.pan = sender.value
-        print(engine)
-        print(engine.mainMixerNode.pan)
-        print(sender.value)
     }
     
     
