@@ -10,17 +10,22 @@ import UIKit
 import Firebase
 
 class LoginViewController: UIViewController {
-    let ref = FIRDatabase.database().reference()
+    
+    @IBOutlet weak var pwd: UITextField!
+    @IBOutlet weak var uid: UITextField!
     
     @IBAction func signIn() {
         guard let controller = self.storyboard?.instantiateViewController(withIdentifier: "main") as? UINavigationController
             else { fatalError() }
         present(controller, animated: true, completion: nil)
+        let _ = FIRDatabase.database().reference()
+        FIRAuth.auth()?.createUser(withEmail: uid.text!, password: pwd.text!) { (user, error) in
+            // ...
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
-
 }

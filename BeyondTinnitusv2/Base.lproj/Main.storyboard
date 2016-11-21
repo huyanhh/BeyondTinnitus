@@ -114,6 +114,10 @@
                             <constraint firstAttribute="bottom" secondItem="8cc-Ec-vjq" secondAttribute="bottom" constant="8" id="w5q-17-vGO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pwd" destination="f18-Kh-wz6" id="Kw8-Ws-CXc"/>
+                        <outlet property="uid" destination="b4L-WI-m1c" id="mdv-gp-kNZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -327,7 +331,7 @@
                                         <rect key="frame" x="0.0" y="28" width="342" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="s42-Sw-fBP" id="wgf-GR-3hw">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
