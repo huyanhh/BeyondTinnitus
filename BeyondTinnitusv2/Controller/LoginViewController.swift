@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
-
+    let ref = FIRDatabase.database().reference()
     
     @IBAction func signIn() {
         guard let controller = self.storyboard?.instantiateViewController(withIdentifier: "main") as? UINavigationController
