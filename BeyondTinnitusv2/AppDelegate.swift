@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // Appearance proxies
         UILabel.appearance().defaultFont =  UIFont.systemFont(ofSize: 15/*Any Value*/, weight: UIFontWeightThin)
-        
+        Theme.apply()
         
         return true
     }

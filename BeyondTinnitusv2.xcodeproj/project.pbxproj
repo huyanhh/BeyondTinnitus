@@ -22,6 +22,7 @@
 		3B9F709C1DE0CB3100D310DB /* BeyondUIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F709B1DE0CB3100D310DB /* BeyondUIFont.swift */; };
 		3B9F709E1DE0DB0400D310DB /* WideButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F709D1DE0DB0400D310DB /* WideButton.swift */; };
 		3B9F70A01DE0DCDA00D310DB /* BeyondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F709F1DE0DCDA00D310DB /* BeyondView.swift */; };
+		9FAA3D4B1DE269D00056776E /* FontProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAA3D4A1DE269D00056776E /* FontProxy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		3B9F709B1DE0CB3100D310DB /* BeyondUIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BeyondUIFont.swift; path = Utility/BeyondUIFont.swift; sourceTree = "<group>"; };
 		3B9F709D1DE0DB0400D310DB /* WideButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WideButton.swift; path = View/WideButton.swift; sourceTree = "<group>"; };
 		3B9F709F1DE0DCDA00D310DB /* BeyondView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BeyondView.swift; path = View/BeyondView.swift; sourceTree = "<group>"; };
+		9FAA3D4A1DE269D00056776E /* FontProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FontProxy.swift; path = View/FontProxy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				3B9F709D1DE0DB0400D310DB /* WideButton.swift */,
 				3B9F709F1DE0DCDA00D310DB /* BeyondView.swift */,
+				9FAA3D4A1DE269D00056776E /* FontProxy.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				3B9F70911DE0C0A500D310DB /* SoundBalanceViewController.swift in Sources */,
 				3B9F70961DE0C13A00D310DB /* BeyondUIColor.swift in Sources */,
 				3B9F70931DE0C0B700D310DB /* DashboardViewController.swift in Sources */,
+				9FAA3D4B1DE269D00056776E /* FontProxy.swift in Sources */,
 				3B9F70A01DE0DCDA00D310DB /* BeyondView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
