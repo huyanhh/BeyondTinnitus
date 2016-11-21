@@ -8,27 +8,44 @@
 
 import UIKit
 
+extension UILabel {
+    dynamic var defaultFont: UIFont? {
+        get { return self.font }
+        set {
+            let sizeOfOldFont = self.font.pointSize
+            let fontNameOfNewFont = newValue?.fontName
+            self.font = UIFont(name: fontNameOfNewFont!, size: sizeOfOldFont)
+        }
+    }
+    
+}
+
 extension UIButton {
-    var titleLabelFont: UIFont! {
+    var defaultFont: UIFont! {
         get { return self.titleLabel?.font }
-        set { self.titleLabel?.font = newValue }
+        set {
+            let sizeOfOldFont = self.defaultFont.pointSize
+            let fontNameOfNewFont = newValue?.fontName
+            self.titleLabel?.font = UIFont(name: fontNameOfNewFont!, size: sizeOfOldFont)
+        }
     }
 }
 
-class Theme {
+struct Theme {
     static func apply() {
         applyToUIButton()
         applyToUITextField()
+        applyToUILabel()
     }
     
-    static func applyToUIButton(a: UIButton = UIButton.appearance()) {
-        a.titleLabelFont = UIFont(name: "avenir", size:20.0)
+    static func applyToUIButton(button: UIButton = UIButton.appearance()) {
+        button.defaultFont = UIFont(name: "Avenir", size: 20.0)
     }
-    static func applyToUITextField(b: UITextField = UITextField.appearance()) {
-        b.font = UIFont(name: "avenir", size:20.0)
+    static func applyToUITextField(text: UITextField = UITextField.appearance()) {
+        text.font = UIFont(name: "Avenir", size: 20.0)
     }
-    static func applyToUILabel(c: UILabel = UILabel.appearance()){
-        c.font = UIFont(name: "avenir", size: c.font.pointSize)
+    static func applyToUILabel(label: UILabel = UILabel.appearance()) {
+        label.defaultFont =  UIFont(name: "Avenir", size: 15 /*doesn't matter*/)
     }
 }
 

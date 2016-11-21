@@ -17,7 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         // Appearance proxies
-        UILabel.appearance().defaultFont =  UIFont.systemFont(ofSize: 15/*Any Value*/, weight: UIFontWeightThin)
         Theme.apply()
         
         return true
