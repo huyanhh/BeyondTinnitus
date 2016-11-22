@@ -37,6 +37,7 @@ class FrequencySettingViewController: UIViewController {
         } catch let error as NSError {
             print(error)
         }
+        setUpAudioSession()
     }
     
     @IBAction func sliderChanged(sender: UISlider) {
@@ -65,6 +66,15 @@ class FrequencySettingViewController: UIViewController {
         let controller = segue.destination as? VolumeAdjustViewController
         controller?.tone = tone
         controller?.engine = engine
+    }
+    
+    func setUpAudioSession(){
+        do{
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient, with: AVAudioSessionCategoryOptions.mixWithOthers)
+            try AVAudioSession.sharedInstance().setActive(true, with: AVAudioSessionSetActiveOptions.notifyOthersOnDeactivation)
+        } catch let error {
+            print(error)
+        }
     }
  
 
