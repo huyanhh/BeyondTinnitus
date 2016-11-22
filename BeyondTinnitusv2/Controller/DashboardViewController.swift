@@ -7,21 +7,38 @@
 //
 
 import UIKit
+import AVFoundation
 
 class DashboardViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    var engine: AVAudioEngine!
+    var tone: AVTonePlayerUnit!
+    
     fileprivate let sectionData = [" "]
-    fileprivate let rowData = [["Play with Music"],
-                           ["Play with Spotify"],
-                           ["Hello boys"],
-                           ["Set Timer"]]
+    fileprivate let rowData = [["apple_music", "Play with Music"],
+                           ["", "Play with Spotify"],
+                           ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    @IBAction func toggleplay(_ sender: UIButton) {
+        if tone.isPlaying {
+            engine.mainMixerNode.volume = 0.0
+            tone.stop()
+            sender.setImage(UIImage(named: "play"), for: .normal)
+            
+        } else {
+            tone.preparePlaying()
+            tone.play()
+            engine.mainMixerNode.volume = 1.0
+            sender.setImage(UIImage(named: "pause"), for: .normal)
+        }
     }
 
 }
@@ -37,16 +54,15 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
         return rowData.count
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sectionData[section]
-    }
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        return sectionData[section]
+//    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        // We do [row][section] for now because we only have one section
-        
 
-        cell.textLabel?.text = rowData[indexPath.row][indexPath.section]
+        cell.textLabel?.text = rowData[indexPath.row][1]
+        cell.imageView?.image = UIImage(named: rowData[indexPath.row][0])
         
         return cell
     }

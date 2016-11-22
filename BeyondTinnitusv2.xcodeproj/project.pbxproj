@@ -126,10 +126,10 @@
 		3B9F70881DE0C04700D310DB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9F78AE841DE3C89F005201BB /* CreateAccountController.swift */,
 				3B9F70891DE0C05300D310DB /* LoginViewController.swift */,
 				3B9F708B1DE0C08100D310DB /* FrequencySettingViewController.swift */,
 				3B9F708E1DE0C09B00D310DB /* VolumeAdjustViewController.swift */,
-				9F78AE841DE3C89F005201BB /* CreateAccountController.swift */,
 				3B9F70901DE0C0A500D310DB /* SoundBalanceViewController.swift */,
 				3B9F70921DE0C0B700D310DB /* DashboardViewController.swift */,
 			);

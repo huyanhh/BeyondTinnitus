@@ -29,15 +29,12 @@ class SoundBalanceViewController: UIViewController {
         tone.pan = sender.value
     }
     
-    
-    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let controller = segue.destination 
-//        
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let controller = segue.destination as? DashboardViewController
+        controller?.tone = tone
+        controller?.engine = engine
+    }
  
-
 }
