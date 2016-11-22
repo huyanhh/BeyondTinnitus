@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 
 class FrequencySettingViewController: UIViewController {
-    @IBOutlet weak var otherSlider: UISlider!
+
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var label: UILabel!
 
@@ -20,10 +20,6 @@ class FrequencySettingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        otherSlider.minimumValue = -1.0
-        otherSlider.maximumValue = 1.0
-        otherSlider.value = 0.0
 
         tone = AVTonePlayerUnit()
         label.text = String(format: "%.1f", tone.frequency)
@@ -48,12 +44,6 @@ class FrequencySettingViewController: UIViewController {
         tone.frequency = freq
         label.text = String(format: "%.1f", freq)
     }
-    
-    @IBAction func otherSliderChanged(_ sender: UISlider) {
-//        engine.mainMixerNode.pan = sender.value
-        tone.pan = sender.value
-    }
-    
     
     @IBAction func togglePlay(sender: UIButton) {
         if tone.isPlaying {

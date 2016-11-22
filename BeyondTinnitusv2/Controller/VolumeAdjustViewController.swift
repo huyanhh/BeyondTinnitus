@@ -11,13 +11,23 @@ import AVFoundation
 
 class VolumeAdjustViewController: UIViewController {
 
+    @IBOutlet weak var slider: UISlider!
+    
     var engine: AVAudioEngine!
     var tone: AVTonePlayerUnit!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        slider.minimumValue = -5.0
+        slider.maximumValue = 5.0
+        slider.value = 0.0
 
     }
+    
+    @IBAction func sliderChanged(_ sender: UISlider) {
+        tone.volume = sender.value
+    }
+    
 
     // MARK: - Navigation
 

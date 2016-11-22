@@ -11,10 +11,9 @@ import AVFoundation
 
 class SoundBalanceViewController: UIViewController {
 
-    var engine: AVAudioEngine!
-    
     @IBOutlet weak var slider: UISlider!
     
+    var engine: AVAudioEngine!
     var tone: AVTonePlayerUnit!
     
     override func viewDidLoad() {
@@ -27,7 +26,7 @@ class SoundBalanceViewController: UIViewController {
     }
     
     @IBAction func sliderChanged(_ sender: UISlider) {
-        engine.mainMixerNode.pan = sender.value
+        tone.pan = sender.value
     }
     
     
