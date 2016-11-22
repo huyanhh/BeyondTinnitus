@@ -19,7 +19,7 @@ class LoginViewController: UIViewController {
             else { fatalError() }
         present(controller, animated: true, completion: nil)
         let _ = FIRDatabase.database().reference()
-        FIRAuth.auth()?.createUser(withEmail: uid.text!, password: pwd.text!) { (user, error) in
+        FIRAuth.auth()?.signIn(withEmail: uid.text!, password: pwd.text!){ (user, error) in
             // ...
         }
     }
