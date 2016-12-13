@@ -13,8 +13,8 @@ class VolumeAdjustViewController: UIViewController {
 
     @IBOutlet weak var slider: UISlider!
     
-    var engine: AVAudioEngine!
-    var tone: AVTonePlayerUnit!
+    var engine: AVAudioEngine! = FrequencyManager.shared.engine
+    var tone: AVTonePlayerUnit! = FrequencyManager.shared.centerTone
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,10 +31,10 @@ class VolumeAdjustViewController: UIViewController {
 
     // MARK: - Navigation
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let controller =  segue.destination as? SoundBalanceViewController
-        controller?.tone = tone
-        controller?.engine = engine
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let controller =  segue.destination as? SoundBalanceViewController
+//        controller?.tone = tone
+//        controller?.engine = engine
+//    }
     
 }

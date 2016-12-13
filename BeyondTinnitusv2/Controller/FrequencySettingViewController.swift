@@ -14,35 +14,19 @@ class FrequencySettingViewController: UIViewController {
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var label: UILabel!
 
-    var engine: AVAudioEngine!
-    var tone: AVTonePlayerUnit!
-    var tone2: AVTonePlayerUnit!
+    var engine: AVAudioEngine! = FrequencyManager.shared.engine
+    var tone: AVTonePlayerUnit! = FrequencyManager.shared.centerTone
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        tone = AVTonePlayerUnit()
-        label.text = String(format: "%.1f", tone.frequency)
         slider.minimumValue = -5.0
         slider.maximumValue = 5.0
         slider.value = 0.0
-        let format = AVAudioFormat(standardFormatWithSampleRate: tone.sampleRate, channels: 1)
-        print(format.sampleRate)
-        engine = AVAudioEngine()
-        engine.attach(tone)
-        let mixer = engine.mainMixerNode
-        engine.connect(tone, to: mixer, format: format)
-        do {
-            try engine.start()
-        } catch let error as NSError {
-            print(error)
-        }
-        setUpAudioSession()
     }
     
     @IBAction func sliderChanged(sender: UISlider) {
         let freq = 440.0 * pow(2.0, Double(sender.value))
-        tone.frequency = freq
+        FrequencyManager.shared.centerToneFrequency = freq
         label.text = String(format: "%.1f", freq)
     }
     
@@ -67,15 +51,4 @@ class FrequencySettingViewController: UIViewController {
         controller?.tone = tone
         controller?.engine = engine
     }
-    
-    func setUpAudioSession(){
-        do{
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient, with: AVAudioSessionCategoryOptions.mixWithOthers)
-            try AVAudioSession.sharedInstance().setActive(true, with: AVAudioSessionSetActiveOptions.notifyOthersOnDeactivation)
-        } catch let error {
-            print(error)
-        }
-    }
- 
-
 }
