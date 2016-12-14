@@ -62,6 +62,7 @@ final class FrequencyManager {
     func play() {
         for tone in tones {
             guard let tone = tone else { fatalError() }
+            tone.preparePlaying()
             tone.play()
         }
     }
@@ -91,8 +92,8 @@ final class FrequencyManager {
         for index in 0...TONE_RANGE {
             let tone = AVTonePlayerUnit()
             tone.frequency = calculateFrequency(at: index)
-            connect(tone: tone)
             tones.append(tone)
+            connect(tone: tone)
         }
     }
     
@@ -109,7 +110,6 @@ final class FrequencyManager {
         let mixer = engine.mainMixerNode
         engine.attach(tone)
         engine.connect(tone, to: mixer, format: format)
-
     }
     
 }
