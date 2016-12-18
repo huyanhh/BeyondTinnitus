@@ -15,7 +15,7 @@ class FrequencySettingViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
 
     var engine: AVAudioEngine! = FrequencyManager.shared.engine
-    var tone: AVTonePlayerUnit! = FrequencyManager.shared.centerTone
+    var tone: AVTonePlayerUnit! = FrequencyManager.shared.middle.centerTone
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,7 @@ class FrequencySettingViewController: UIViewController {
     
     @IBAction func sliderChanged(sender: UISlider) {
         let freq = 440.0 * pow(2.0, Double(sender.value))
-        FrequencyManager.shared.centerToneFrequency = freq
+        FrequencyManager.shared.centerFrequency = freq
         label.text = String(format: "%.1f", freq)
     }
     
@@ -39,9 +39,9 @@ class FrequencySettingViewController: UIViewController {
             FrequencyManager.shared.play()
             engine.mainMixerNode.volume = 1.0
             sender.setTitle("Stop", for: .normal)
-//            print("center tone: ", tone.frequency)
-//            FrequencyManager.shared.tones.map { print($0?.isPlaying) }
-//            print("======")
+            print("center tone: ", tone.frequency)
+//            FrequencyManager.shared.tones.map { print($0?.frequency) }
+            print("======")
         }
     }
 

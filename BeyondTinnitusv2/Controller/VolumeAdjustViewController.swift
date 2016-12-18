@@ -14,7 +14,7 @@ class VolumeAdjustViewController: UIViewController {
     @IBOutlet weak var slider: UISlider!
     
     var engine: AVAudioEngine! = FrequencyManager.shared.engine
-    var tone: AVTonePlayerUnit! = FrequencyManager.shared.centerTone
+    var tone: AVTonePlayerUnit! = FrequencyManager.shared.middle.centerTone
     
     override func viewDidLoad() {
         super.viewDidLoad()
