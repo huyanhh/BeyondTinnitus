@@ -17,35 +17,38 @@ struct Tone {
     private let DEFAULT_FREQUENCY = 440.0
     
     /// Amount of tones to play
-    private let TONE_RANGE = 220
+    private let TONE_RANGE = 200
     /// Multiplier for calculating the range of frequencies to play
-    private let multiplier: Double
+    private let multiplierCenter: Double
+    private let multiplierRange: Double
     
     /// Low of the range, based on the center tone's frequency
     private var low: Double {
         if (centerTone) != nil {
-            return centerTone.frequency - centerTone.frequency * multiplier
-        } else { return DEFAULT_FREQUENCY - DEFAULT_FREQUENCY * multiplier }
+            return centerTone.frequency - centerTone.frequency * multiplierRange
+        } else { return DEFAULT_FREQUENCY - DEFAULT_FREQUENCY * multiplierRange }
     }
     private var high: Double {
         if (centerTone) != nil {
-            return centerTone.frequency + centerTone.frequency * multiplier
-        } else { return DEFAULT_FREQUENCY + DEFAULT_FREQUENCY * multiplier }
+            return centerTone.frequency + centerTone.frequency * multiplierRange
+        } else { return DEFAULT_FREQUENCY + DEFAULT_FREQUENCY * multiplierRange }
     }
     
     private(set) var outerTones: [AVTonePlayerUnit?] = []
     private(set) var centerTone: AVTonePlayerUnit!
     
-    init(multiplier: Double, engine: AVAudioEngine) {
-        self.multiplier = multiplier
+    init(multiplierCenter: Double, multiplierRange: Double, engine: AVAudioEngine) {
+        self.multiplierCenter = multiplierCenter
+        self.multiplierRange = multiplierRange
         self.engine = engine
         generateTones()
         centerTone = outerTones[TONE_RANGE / 2]
+        adjustCenterFrequency(newValue: centerTone.frequency)
     }
     
     /// Set the frequency of all the tones uniformly based on the difference of the slider
     public mutating func adjustCenterFrequency(newValue: Double) {
-        centerTone.frequency = newValue
+        centerTone.frequency = newValue * multiplierCenter
         for (index, tone) in outerTones.enumerated() {
             tone?.frequency = calculateFrequency(at: index)
         }

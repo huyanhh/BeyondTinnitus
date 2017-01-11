@@ -28,6 +28,13 @@ class FrequencySettingViewController: UIViewController {
         let freq = 440.0 * pow(2.0, Double(sender.value))
         FrequencyManager.shared.centerFrequency = freq
         label.text = String(format: "%.1f", freq)
+        print("------")
+        for tone in FrequencyManager.shared.tones {
+            for range in tone.outerTones {
+                print(range?.frequency)
+            }
+        }
+        print("------")
     }
     
     @IBAction func togglePlay(sender: UIButton) {
@@ -40,7 +47,9 @@ class FrequencySettingViewController: UIViewController {
             engine.mainMixerNode.volume = 1.0
             sender.setTitle("Stop", for: .normal)
             print("center tone: ", tone.frequency)
-//            FrequencyManager.shared.tones.map { print($0?.frequency) }
+            for tone in FrequencyManager.shared.tones {
+                print(tone.centerTone.frequency)
+            }
             print("======")
         }
     }
