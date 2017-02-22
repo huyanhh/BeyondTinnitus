@@ -18,8 +18,6 @@ class LoginViewController: UIViewController {
     fileprivate var backgroundTapGesture: UITapGestureRecognizer?
     var tone: AVAudioPlayer!
     
-    
-    
     @IBAction func signIn() {
         guard let controller = self.storyboard?.instantiateViewController(withIdentifier: "main") as? UINavigationController
             else { fatalError() }
@@ -37,9 +35,10 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func playforreal() {
-        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-        let documentsDirectory = paths[0]
-        let filePath = "\(documentsDirectory)/soundpoo.mp4"
+//        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+//        let documentsDirectory = paths[0]
+//        let filePath = "\(documentsDirectory)/soundpoo.mp4"
+        let filePath = Bundle.main.path(forResource: "Tf-8000_Snd1.mp4", ofType: nil)!
         print("file path")
         let url = URL(fileURLWithPath: filePath)
         print(url)
@@ -47,6 +46,33 @@ class LoginViewController: UIViewController {
             let sound = try AVAudioPlayer(contentsOf: url)
             
             tone = sound
+            tone.numberOfLoops = -1
+            sound.play()
+        } catch {
+            // couldn't load file
+            print("couldnt load file")
+        }
+        
+        let filePath2 = Bundle.main.path(forResource: "Tf-8000Snd2.mp4", ofType: nil)!
+        let url2 = URL(fileURLWithPath: filePath2)
+        do {
+            let sound = try AVAudioPlayer(contentsOf: url2)
+            
+            tone = sound
+            tone.numberOfLoops = -1
+            sound.play()
+        } catch {
+            // couldn't load file
+            print("couldnt load file")
+        }
+        
+        let filePath3 = Bundle.main.path(forResource: "Tf-8000Snd3.mp4", ofType: nil)!
+        let url3 = URL(fileURLWithPath: filePath3)
+        do {
+            let sound = try AVAudioPlayer(contentsOf: url3)
+            
+            tone = sound
+            tone.numberOfLoops = -1
             sound.play()
         } catch {
             // couldn't load file
@@ -92,7 +118,7 @@ class LoginViewController: UIViewController {
                 // Local file URL for "images/island.jpg" is returned
                 print("success")
                 print(url!)
-                self.playAudioWith(file: url!)
+                //self.playAudioWith(file: url!)
             }
         }
 
