@@ -14,68 +14,52 @@ class FrequencySettingViewController: UIViewController {
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var label: UILabel!
 
-    var engine: AVAudioEngine!
-    var tone: AVTonePlayerUnit!
-    var tone2: AVTonePlayerUnit!
+    var engine: AVAudioEngine! = FrequencyManager.shared.engine
+    var tone: AVTonePlayerUnit! = FrequencyManager.shared.middle.centerTone
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        tone = AVTonePlayerUnit()
-        label.text = String(format: "%.1f", tone.frequency)
         slider.minimumValue = -5.0
         slider.maximumValue = 5.0
         slider.value = 0.0
-        let format = AVAudioFormat(standardFormatWithSampleRate: tone.sampleRate, channels: 1)
-        print(format.sampleRate)
-        engine = AVAudioEngine()
-        engine.attach(tone)
-        let mixer = engine.mainMixerNode
-        engine.connect(tone, to: mixer, format: format)
-        do {
-            try engine.start()
-        } catch let error as NSError {
-            print(error)
-        }
-        setUpAudioSession()
     }
     
     @IBAction func sliderChanged(sender: UISlider) {
         let freq = 440.0 * pow(2.0, Double(sender.value))
-        tone.frequency = freq
+        FrequencyManager.shared.centerFrequency = freq
         label.text = String(format: "%.1f", freq)
+        print("------")
+        for tone in FrequencyManager.shared.tones {
+            for range in tone.outerTones {
+                print(range?.frequency)
+            }
+        }
+        print("------")
     }
     
     @IBAction func togglePlay(sender: UIButton) {
         if tone.isPlaying {
             engine.mainMixerNode.volume = 0.0
-            tone.stop()
+            FrequencyManager.shared.stop()
             sender.setTitle("Start", for: .normal)
         } else {
-            tone.preparePlaying()
-            tone.play()
+            FrequencyManager.shared.play()
             engine.mainMixerNode.volume = 1.0
             sender.setTitle("Stop", for: .normal)
+            print("center tone: ", tone.frequency)
+            for tone in FrequencyManager.shared.tones {
+                print(tone.centerTone.frequency)
+            }
+            print("======")
         }
     }
 
     
     // MARK: - Navigation
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let controller = segue.destination as? VolumeAdjustViewController
-        controller?.tone = tone
-        controller?.engine = engine
-    }
-    
-    func setUpAudioSession(){
-        do{
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient, with: AVAudioSessionCategoryOptions.mixWithOthers)
-            try AVAudioSession.sharedInstance().setActive(true, with: AVAudioSessionSetActiveOptions.notifyOthersOnDeactivation)
-        } catch let error {
-            print(error)
-        }
-    }
- 
-
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let controller = segue.destination as? VolumeAdjustViewController
+//        controller?.tone = tone
+//        controller?.engine = engine
+//    }
 }

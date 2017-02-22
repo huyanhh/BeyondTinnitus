@@ -13,8 +13,8 @@ class SoundBalanceViewController: UIViewController {
 
     @IBOutlet weak var slider: UISlider!
     
-    var engine: AVAudioEngine!
-    var tone: AVTonePlayerUnit!
+    var engine: AVAudioEngine! = FrequencyManager.shared.engine
+    var tone: AVTonePlayerUnit! = FrequencyManager.shared.middle.centerTone
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,10 +31,10 @@ class SoundBalanceViewController: UIViewController {
     
     // MARK: - Navigation
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let controller = segue.destination as? DashboardViewController
-        controller?.tone = tone
-        controller?.engine = engine
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let controller = segue.destination as? DashboardViewController
+//        controller?.tone = tone
+//        controller?.engine = engine
+//    }
  
 }
