@@ -13,12 +13,12 @@ class DashboardViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var engine: AVAudioEngine!
-    var tone: AVTonePlayerUnit!
+    var engine: AVAudioEngine! = FrequencyManager.shared.engine
+    var tone: AVTonePlayerUnit! = FrequencyManager.shared.middle.centerTone
     
     fileprivate let sectionData = [" "]
     fileprivate let rowData = [["apple_music", "Play with Music"],
-                           ["", "Play with Spotify"],
+                           ["spotify", "Play with Spotify"],
                            ]
     
     override func viewDidLoad() {
