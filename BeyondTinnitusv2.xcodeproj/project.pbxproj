@@ -23,6 +23,7 @@
 		3B9F709A1DE0C5E200D310DB /* MKTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F70991DE0C5E200D310DB /* MKTextField.swift */; };
 		3B9F709E1DE0DB0400D310DB /* WideButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F709D1DE0DB0400D310DB /* WideButton.swift */; };
 		3B9F70A01DE0DCDA00D310DB /* BeyondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F709F1DE0DCDA00D310DB /* BeyondView.swift */; };
+		3BE6EB491E493E61000B450A /* Tf-8000.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3BE6EB481E493E61000B450A /* Tf-8000.mp4 */; };
 		3BFC23DE1DE4F66B00C99035 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFC23DD1DE4F66B00C99035 /* Utility.swift */; };
 		4E0B0CF7E247326FF5B733C1 /* Pods_BeyondTinnitusv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC0925489789A38A65A97A33 /* Pods_BeyondTinnitusv2.framework */; };
 		9F78AE851DE3C89F005201BB /* CreateAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F78AE841DE3C89F005201BB /* CreateAccountController.swift */; };
@@ -49,6 +50,7 @@
 		3B9F70991DE0C5E200D310DB /* MKTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MKTextField.swift; path = View/MKTextField.swift; sourceTree = "<group>"; };
 		3B9F709D1DE0DB0400D310DB /* WideButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WideButton.swift; path = View/WideButton.swift; sourceTree = "<group>"; };
 		3B9F709F1DE0DCDA00D310DB /* BeyondView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BeyondView.swift; path = View/BeyondView.swift; sourceTree = "<group>"; };
+		3BE6EB481E493E61000B450A /* Tf-8000.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Tf-8000.mp4"; path = "audio_assets/Tf-8000.mp4"; sourceTree = "<group>"; };
 		3BFC23DD1DE4F66B00C99035 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = Utility/Utility.swift; sourceTree = "<group>"; };
 		413BB2440E2F9D7AB5E9B8A4 /* Pods-BeyondTinnitusv2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeyondTinnitusv2.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeyondTinnitusv2/Pods-BeyondTinnitusv2.release.xcconfig"; sourceTree = "<group>"; };
 		9F78AE841DE3C89F005201BB /* CreateAccountController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateAccountController.swift; path = Controller/CreateAccountController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 		3B9F70711DE0BE1300D310DB /* BeyondTinnitusv2 */ = {
 			isa = PBXGroup;
 			children = (
+				3BE6EB421E493592000B450A /* audio_assets */,
 				3B9F70941DE0C12900D310DB /* Utility */,
 				3B9F70881DE0C04700D310DB /* Controller */,
 				3B9F70871DE0C04000D310DB /* View */,
@@ -154,6 +157,14 @@
 				3BFC23DD1DE4F66B00C99035 /* Utility.swift */,
 			);
 			name = Utility;
+			sourceTree = "<group>";
+		};
+		3BE6EB421E493592000B450A /* audio_assets */ = {
+			isa = PBXGroup;
+			children = (
+				3BE6EB481E493E61000B450A /* Tf-8000.mp4 */,
+			);
+			name = audio_assets;
 			sourceTree = "<group>";
 		};
 		584D9DBEE6E1AFA37593333F /* Pods */ = {
@@ -232,6 +243,7 @@
 				9FAA3D4D1DE2E3D20056776E /* GoogleService-Info.plist in Resources */,
 				3B9F707A1DE0BE1300D310DB /* Assets.xcassets in Resources */,
 				3B9F70781DE0BE1300D310DB /* Main.storyboard in Resources */,
+				3BE6EB491E493E61000B450A /* Tf-8000.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
