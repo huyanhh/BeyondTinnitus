@@ -13,9 +13,6 @@ class DashboardViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var engine: AVAudioEngine! = FrequencyManager.shared.engine
-    var tone: AVTonePlayerUnit! = FrequencyManager.shared.middle.centerTone
-    
     fileprivate let sectionData = [" "]
     fileprivate let rowData = [["apple_music", "Play with Music"],
                            ["spotify", "Play with Spotify"],
@@ -28,17 +25,6 @@ class DashboardViewController: UIViewController {
     }
     
     @IBAction func toggleplay(_ sender: UIButton) {
-        if tone.isPlaying {
-            engine.mainMixerNode.volume = 0.0
-            tone.stop()
-            sender.setImage(UIImage(named: "play"), for: .normal)
-            
-        } else {
-            tone.preparePlaying()
-            tone.play()
-            engine.mainMixerNode.volume = 1.0
-            sender.setImage(UIImage(named: "pause"), for: .normal)
-        }
     }
 
 }

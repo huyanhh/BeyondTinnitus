@@ -13,28 +13,20 @@ class VolumeAdjustViewController: UIViewController {
 
     @IBOutlet weak var slider: UISlider!
     
-    var engine: AVAudioEngine! = FrequencyManager.shared.engine
-    var tone: AVTonePlayerUnit! = FrequencyManager.shared.middle.centerTone
+    var tf: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        slider.minimumValue = -5.0
-        slider.maximumValue = 5.0
+        slider.minimumValue = 0
+        slider.maximumValue = 1
         slider.value = 0.0
-
+        
+        FrequencyManager.shared.setupAudioFiles(frequency: String(tf))
+        FrequencyManager.shared.playAudioFile(tone: .whole)
     }
     
     @IBAction func sliderChanged(_ sender: UISlider) {
-        tone.volume = sender.value
+        FrequencyManager.shared.wholeTone.volume = sender.value
     }
-    
-
-    // MARK: - Navigation
-
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let controller =  segue.destination as? SoundBalanceViewController
-//        controller?.tone = tone
-//        controller?.engine = engine
-//    }
     
 }
