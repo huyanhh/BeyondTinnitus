@@ -4,7 +4,6 @@
 //
 //  Created by Huyanh Hoang on 2016. 11. 19..
 //  Copyright © 2016년 teamMedApp. All rights reserved.
-//
 
 import UIKit
 import Firebase
@@ -16,8 +15,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var uid: UITextField!
     fileprivate var keyboardSize: CGRect?
     fileprivate var backgroundTapGesture: UITapGestureRecognizer?
-    var tone: AVAudioPlayer!
-    
+
     @IBAction func signIn() {
         guard let controller = self.storyboard?.instantiateViewController(withIdentifier: "main") as? UINavigationController
             else { fatalError() }
@@ -28,116 +26,9 @@ class LoginViewController: UIViewController {
         }
     }
     
-    @IBAction func playAudioFile() {
-//        let path = Bundle.main.path(forResource: "Tf-8000.mp4", ofType: nil)!
-//        let url = URL(fileURLWithPath: path)
-        fetchFile()
-    }
-    
-    @IBAction func playforreal() {
-//        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-//        let documentsDirectory = paths[0]
-//        let filePath = "\(documentsDirectory)/soundpoo.mp4"
-        let filePath = Bundle.main.path(forResource: "Tf-8000_Snd1.mp4", ofType: nil)!
-        print("file path")
-        let url = URL(fileURLWithPath: filePath)
-        print(url)
-        do {
-            let sound = try AVAudioPlayer(contentsOf: url)
-            
-            tone = sound
-            tone.numberOfLoops = -1
-            sound.play()
-        } catch {
-            // couldn't load file
-            print("couldnt load file")
-        }
-        
-        let filePath2 = Bundle.main.path(forResource: "Tf-8000Snd2.mp4", ofType: nil)!
-        let url2 = URL(fileURLWithPath: filePath2)
-        do {
-            let sound = try AVAudioPlayer(contentsOf: url2)
-            
-            tone = sound
-            tone.numberOfLoops = -1
-            sound.play()
-        } catch {
-            // couldn't load file
-            print("couldnt load file")
-        }
-        
-        let filePath3 = Bundle.main.path(forResource: "Tf-8000Snd3.mp4", ofType: nil)!
-        let url3 = URL(fileURLWithPath: filePath3)
-        do {
-            let sound = try AVAudioPlayer(contentsOf: url3)
-            
-            tone = sound
-            tone.numberOfLoops = -1
-            sound.play()
-        } catch {
-            // couldn't load file
-            print("couldnt load file")
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         registerForKeyboardNotifications()
-    }
-    
-    func playAudioWith(file: URL) {
-        do {
-            let sound = try AVAudioPlayer(contentsOf: file)
-            tone = sound
-            tone.play()
-        } catch {
-            // couldn't load file
-            print("couldnt load file")
-        }
-    }
-    
-    func fetchFile() {
-        
-        let storage = FIRStorage.storage()
-        
-        // Create a storage reference from our storage service
-        let storageRef = storage.reference(forURL: "gs://beyondtinnitus-340f1.appspot.com")
-        let soundRef = storageRef.child("soundtest.mp4")
-        
-        // Create local filesystem URL
-//        let localURL = URL(string: "path/to/image")!
-        let localURL = getDocsURL()
-        
-        // Download to the local filesystem
-        soundRef.write(toFile: localURL) { url, error in
-            if let error = error {
-                // Uh-oh, an error occurred!
-                print("some error")
-                print(error)
-            } else {
-                // Local file URL for "images/island.jpg" is returned
-                print("success")
-                print(url!)
-                //self.playAudioWith(file: url!)
-            }
-        }
-
-    }
-    
-    func getDocsURL() -> URL {
-        let filePath = "file:/sound.mp4"
-        guard var docsurl = URL.init(string: filePath) else { fatalError() }
-        do {
-            let fm = FileManager.default
-            docsurl = try fm.url(for: .documentDirectory, in: .userDomainMask,
-                                     appropriateFor: nil, create: false)
-            docsurl.appendPathComponent("soundpoo.mp4")
-            
-        } catch {
-            // deal with error here
-            print("error")
-        }
-        return docsurl
     }
     
     func registerForKeyboardNotifications() {

@@ -10,56 +10,82 @@ import UIKit
 import AVFoundation
 
 class FrequencySettingViewController: UIViewController {
-
-    @IBOutlet weak var slider: UISlider!
+    
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var label: UILabel!
-
-    var engine: AVAudioEngine! = FrequencyManager.shared.engine
-    var tone: AVTonePlayerUnit! = FrequencyManager.shared.middle.centerTone
+    
+    @IBAction func movePage() {
+        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "confirm") as! ConfirmFrequencySettingViewController
+        if let frequency = primaryFrequency {
+            secondViewController.primaryFrequency = frequency
+            secondViewController.engine = engine
+            secondViewController.tone = tone
+            self.navigationController?.pushViewController(secondViewController, animated: true)
+        }
+        if tone.isPlaying {
+            engine.mainMixerNode.volume = 0.0
+            tone.stop()
+        }
+    }
+    
+    var engine: AVAudioEngine!
+    var tone: AVTonePlayerUnit!
+    
+    var rowData: [Double] = [2000, 4000, 6000, 8000, 10000]
+    var primaryFrequency: Double?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        slider.minimumValue = -5.0
-        slider.maximumValue = 5.0
-        slider.value = 0.0
-    }
-    
-    @IBAction func sliderChanged(sender: UISlider) {
-        let freq = 440.0 * pow(2.0, Double(sender.value))
-        FrequencyManager.shared.centerFrequency = freq
-        label.text = String(format: "%.1f", freq)
-        print("------")
-        for tone in FrequencyManager.shared.tones {
-            for range in tone.outerTones {
-                print(range?.frequency)
-            }
-        }
-        print("------")
-    }
-    
-    @IBAction func togglePlay(sender: UIButton) {
-        if tone.isPlaying {
-            engine.mainMixerNode.volume = 0.0
-            FrequencyManager.shared.stop()
-            sender.setTitle("Start", for: .normal)
-        } else {
-            FrequencyManager.shared.play()
-            engine.mainMixerNode.volume = 1.0
-            sender.setTitle("Stop", for: .normal)
-            print("center tone: ", tone.frequency)
-            for tone in FrequencyManager.shared.tones {
-                print(tone.centerTone.frequency)
-            }
-            print("======")
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        tone = AVTonePlayerUnit()
+        engine = AVAudioEngine()
+        engine.attach(tone)
+        
+        let mixer = engine.mainMixerNode
+        
+        engine.connect(tone, to: mixer, format: AVAudioFormat(standardFormatWithSampleRate: tone.sampleRate, channels: 1))
+        
+        do {
+            try engine.start()
+        } catch let error as NSError {
+            print(error)
         }
     }
+}
 
+extension FrequencySettingViewController: UITableViewDelegate, UITableViewDataSource {
     
-    // MARK: - Navigation
-
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let controller = segue.destination as? VolumeAdjustViewController
-//        controller?.tone = tone
-//        controller?.engine = engine
-//    }
+    // DataSource
+    @nonobjc func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return rowData.count
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = FrequencyCell()
+        cell.textLabel?.text = String(rowData[indexPath.row])
+        
+        return cell
+    }
+    
+    // Delegate
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let freq = rowData[indexPath.row]
+        tone.frequency = freq
+        primaryFrequency = freq
+        label?.text = String(format: "You have selected %f Hz", freq)
+        
+        tone.preparePlaying()
+        tone.play()
+        engine.mainMixerNode.volume = 1.0
+    }
+    
 }
