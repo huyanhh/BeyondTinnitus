@@ -12,13 +12,12 @@ import AVFoundation
 
 class ConfirmFrequencySettingViewController: UIViewController {
     
-    @IBOutlet weak var label: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBAction func movePage() {
-        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "adjustvolume1") as! VolumeAdjustViewController
+        let volumeVC = self.storyboard?.instantiateViewController(withIdentifier: "adjustvolume1") as! VolumeAdjustViewController
         if let frequency = tf {
-            secondViewController.tf = Int(frequency)
-            self.navigationController?.pushViewController(secondViewController, animated: true)
+            volumeVC.tf = Int(frequency)
+            self.navigationController?.pushViewController(volumeVC, animated: true)
         }
         if tone.isPlaying {
             engine.mainMixerNode.volume = 0.0
@@ -38,10 +37,9 @@ class ConfirmFrequencySettingViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        rowData.append(primaryFrequency / 2)
+        if primaryFrequency / 2 >= 2000 { rowData.append(primaryFrequency / 2) }
         rowData.append(primaryFrequency)
-        rowData.append(primaryFrequency * 2)
-        
+        if primaryFrequency * 2 <= 10000 { rowData.append(primaryFrequency * 2) }
     }
     
     
@@ -61,7 +59,7 @@ extension ConfirmFrequencySettingViewController: UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = FrequencyCell()
-        cell.textLabel?.text = String(rowData[indexPath.row])
+        cell.textLabel?.text = "\(String(rowData[indexPath.row])) Hz"
         
         return cell
     }
@@ -72,8 +70,12 @@ extension ConfirmFrequencySettingViewController: UITableViewDelegate, UITableVie
         
         let freq = rowData[indexPath.row]
         tf = freq
-        label?.text = String(format: "You have selected %f Hz", freq)
         
+        tone.frequency = freq
+        
+        tone.preparePlaying()
+        tone.play()
+        engine.mainMixerNode.volume = 1.0
   }
     
 }

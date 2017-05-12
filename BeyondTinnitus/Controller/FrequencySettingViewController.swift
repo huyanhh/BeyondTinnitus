@@ -12,15 +12,14 @@ import AVFoundation
 class FrequencySettingViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var label: UILabel!
     
     @IBAction func movePage() {
-        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "confirm") as! ConfirmFrequencySettingViewController
+        let confirmVC = self.storyboard?.instantiateViewController(withIdentifier: "confirm") as! ConfirmFrequencySettingViewController
         if let frequency = primaryFrequency {
-            secondViewController.primaryFrequency = frequency
-            secondViewController.engine = engine
-            secondViewController.tone = tone
-            self.navigationController?.pushViewController(secondViewController, animated: true)
+            confirmVC.primaryFrequency = frequency
+            confirmVC.engine = engine
+            confirmVC.tone = tone
+            self.navigationController?.pushViewController(confirmVC, animated: true)
         }
         if tone.isPlaying {
             engine.mainMixerNode.volume = 0.0
@@ -69,7 +68,7 @@ extension FrequencySettingViewController: UITableViewDelegate, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = FrequencyCell()
-        cell.textLabel?.text = String(rowData[indexPath.row])
+        cell.textLabel?.text = "\(String(rowData[indexPath.row])) Hz"
         
         return cell
     }
@@ -77,11 +76,9 @@ extension FrequencySettingViewController: UITableViewDelegate, UITableViewDataSo
     // Delegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         let freq = rowData[indexPath.row]
         tone.frequency = freq
         primaryFrequency = freq
-        label?.text = String(format: "You have selected %f Hz", freq)
         
         tone.preparePlaying()
         tone.play()

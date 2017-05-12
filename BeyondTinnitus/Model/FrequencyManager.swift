@@ -17,9 +17,9 @@ enum Tone: Int {
 
 final class FrequencyManager {
     
-    var wholeTone: AVAudioPlayer!
-    var halfTone: AVAudioPlayer!
-    var sixteenthTone: AVAudioPlayer!
+    fileprivate(set) var wholeTone: AVAudioPlayer!
+    fileprivate(set) var halfTone: AVAudioPlayer!
+    fileprivate(set) var sixteenthTone: AVAudioPlayer!
     
     static var shared = FrequencyManager()
     
@@ -51,15 +51,37 @@ final class FrequencyManager {
         }
     }
     
+    /// Only to be used in the onboarding
     func playAudioFile(tone: Tone) {
         switch tone {
         case .whole:
+            wholeTone.volume = 0
             wholeTone.play()
         case .half:
+            halfTone.volume = 0
             halfTone.play()
         case .sixteenth:
+            sixteenthTone.volume = 0
             sixteenthTone.play()
         }
+    }
+    
+    func stopAudioFile(tone: Tone) {
+        switch tone {
+        case .whole:
+            if wholeTone.isPlaying {
+                wholeTone.stop()
+            }
+        case .half:
+            if halfTone.isPlaying {
+                halfTone.stop()
+            }
+        case .sixteenth:
+            if sixteenthTone.isPlaying {
+                sixteenthTone.stop()
+            }
+        }
+
     }
     
     func pauseAudioFile(tone: Tone) {

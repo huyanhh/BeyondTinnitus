@@ -20,6 +20,8 @@ class SoundBalanceViewController: UIViewController {
         slider.maximumValue = 1.0
         slider.value = 0.0
         
+        FrequencyManager.shared.stopAudioFile(tone: .sixteenth)
+        FrequencyManager.shared.playAll()
     }
     
     @IBAction func sliderChanged(_ sender: UISlider) {

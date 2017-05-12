@@ -18,6 +18,7 @@ class VolumeAdjust2ViewController: UIViewController {
         slider.maximumValue = 1
         slider.value = 0.0
         
+        FrequencyManager.shared.stopAudioFile(tone: .whole)
         FrequencyManager.shared.playAudioFile(tone: .half)
     }
     
