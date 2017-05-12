@@ -1,0 +1,773 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1BCC2546AEFFFF890BAF348A /* Pods_BeyondTinnitus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75C496BD7ACEF8F38573D54 /* Pods_BeyondTinnitus.framework */; };
+		3B2F3D391EA3FE2800160C89 /* FrequencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2F3D381EA3FE2800160C89 /* FrequencyManager.swift */; };
+		3B2F3D3B1EA40D3500160C89 /* VolumeAdjust2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2F3D3A1EA40D3500160C89 /* VolumeAdjust2ViewController.swift */; };
+		3B2F3D3D1EA40DD400160C89 /* VolumeAdjust3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2F3D3C1EA40DD400160C89 /* VolumeAdjust3ViewController.swift */; };
+		3B2F3D3F1EA40E6800160C89 /* FrequencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2F3D3E1EA40E6800160C89 /* FrequencyCell.swift */; };
+		3B32E04B1E05FF750025FE98 /* AVTonePlayerUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B32E04A1E05FF750025FE98 /* AVTonePlayerUnit.swift */; };
+		3B8E5F411E987AB0007CDAEE /* Tf-2000_AllBand.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5EFD1E987AB0007CDAEE /* Tf-2000_AllBand.mp4 */; };
+		3B8E5F421E987AB0007CDAEE /* Tf-2000_Band1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5EFE1E987AB0007CDAEE /* Tf-2000_Band1.mp4 */; };
+		3B8E5F431E987AB0007CDAEE /* Tf-2000_Band2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5EFF1E987AB0007CDAEE /* Tf-2000_Band2.mp4 */; };
+		3B8E5F441E987AB0007CDAEE /* Tf-2000_Band3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F001E987AB0007CDAEE /* Tf-2000_Band3.mp4 */; };
+		3B8E5F451E987AB0007CDAEE /* Tf-2500_AllBand.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F011E987AB0007CDAEE /* Tf-2500_AllBand.mp4 */; };
+		3B8E5F461E987AB0007CDAEE /* Tf-2500_Band1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F021E987AB0007CDAEE /* Tf-2500_Band1.mp4 */; };
+		3B8E5F471E987AB0007CDAEE /* Tf-2500_Band2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F031E987AB0007CDAEE /* Tf-2500_Band2.mp4 */; };
+		3B8E5F481E987AB0007CDAEE /* Tf-2500_Band3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F041E987AB0007CDAEE /* Tf-2500_Band3.mp4 */; };
+		3B8E5F491E987AB0007CDAEE /* Tf-3000_AllBand.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F051E987AB0007CDAEE /* Tf-3000_AllBand.mp4 */; };
+		3B8E5F4A1E987AB0007CDAEE /* Tf-3000_Band1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F061E987AB0007CDAEE /* Tf-3000_Band1.mp4 */; };
+		3B8E5F4B1E987AB0007CDAEE /* Tf-3000_Band2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F071E987AB0007CDAEE /* Tf-3000_Band2.mp4 */; };
+		3B8E5F4C1E987AB0007CDAEE /* Tf-3000_Band3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F081E987AB0007CDAEE /* Tf-3000_Band3.mp4 */; };
+		3B8E5F4D1E987AB0007CDAEE /* Tf-3500_AllBand.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F091E987AB0007CDAEE /* Tf-3500_AllBand.mp4 */; };
+		3B8E5F4E1E987AB0007CDAEE /* Tf-3500_Band1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F0A1E987AB0007CDAEE /* Tf-3500_Band1.mp4 */; };
+		3B8E5F4F1E987AB0007CDAEE /* Tf-3500_Band2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F0B1E987AB0007CDAEE /* Tf-3500_Band2.mp4 */; };
+		3B8E5F501E987AB0007CDAEE /* Tf-3500_Band3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F0C1E987AB0007CDAEE /* Tf-3500_Band3.mp4 */; };
+		3B8E5F511E987AB0007CDAEE /* Tf-4000_AllBand.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F0D1E987AB0007CDAEE /* Tf-4000_AllBand.mp4 */; };
+		3B8E5F521E987AB0007CDAEE /* Tf-4000_Band1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F0E1E987AB0007CDAEE /* Tf-4000_Band1.mp4 */; };
+		3B8E5F531E987AB0007CDAEE /* Tf-4000_Band2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F0F1E987AB0007CDAEE /* Tf-4000_Band2.mp4 */; };
+		3B8E5F541E987AB0007CDAEE /* Tf-4000_Band3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F101E987AB0007CDAEE /* Tf-4000_Band3.mp4 */; };
+		3B8E5F551E987AB0007CDAEE /* Tf-4500_AllBand.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F111E987AB0007CDAEE /* Tf-4500_AllBand.mp4 */; };
+		3B8E5F561E987AB0007CDAEE /* Tf-4500_Band1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F121E987AB0007CDAEE /* Tf-4500_Band1.mp4 */; };
+		3B8E5F571E987AB0007CDAEE /* Tf-4500_Band2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F131E987AB0007CDAEE /* Tf-4500_Band2.mp4 */; };
+		3B8E5F581E987AB0007CDAEE /* Tf-4500_Band3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F141E987AB0007CDAEE /* Tf-4500_Band3.mp4 */; };
+		3B8E5F591E987AB0007CDAEE /* Tf-5000_AllBand.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F151E987AB0007CDAEE /* Tf-5000_AllBand.mp4 */; };
+		3B8E5F5A1E987AB0007CDAEE /* Tf-5000_Band1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F161E987AB0007CDAEE /* Tf-5000_Band1.mp4 */; };
+		3B8E5F5B1E987AB0007CDAEE /* Tf-5000_Band2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F171E987AB0007CDAEE /* Tf-5000_Band2.mp4 */; };
+		3B8E5F5C1E987AB0007CDAEE /* Tf-5000_Band3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F181E987AB0007CDAEE /* Tf-5000_Band3.mp4 */; };
+		3B8E5F5D1E987AB0007CDAEE /* Tf-5500_AllBand.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F191E987AB0007CDAEE /* Tf-5500_AllBand.mp4 */; };
+		3B8E5F5E1E987AB0007CDAEE /* Tf-5500_Band1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F1A1E987AB0007CDAEE /* Tf-5500_Band1.mp4 */; };
+		3B8E5F5F1E987AB0007CDAEE /* Tf-5500_Band2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F1B1E987AB0007CDAEE /* Tf-5500_Band2.mp4 */; };
+		3B8E5F601E987AB0007CDAEE /* Tf-5500_Band3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F1C1E987AB0007CDAEE /* Tf-5500_Band3.mp4 */; };
+		3B8E5F611E987AB0007CDAEE /* Tf-6000_AllBand.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F1D1E987AB0007CDAEE /* Tf-6000_AllBand.mp4 */; };
+		3B8E5F621E987AB0007CDAEE /* Tf-6000_Band1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F1E1E987AB0007CDAEE /* Tf-6000_Band1.mp4 */; };
+		3B8E5F631E987AB0007CDAEE /* Tf-6000_Band2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F1F1E987AB0007CDAEE /* Tf-6000_Band2.mp4 */; };
+		3B8E5F641E987AB0007CDAEE /* Tf-6000_Band3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F201E987AB0007CDAEE /* Tf-6000_Band3.mp4 */; };
+		3B8E5F651E987AB0007CDAEE /* Tf-6500_AllBand.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F211E987AB0007CDAEE /* Tf-6500_AllBand.mp4 */; };
+		3B8E5F661E987AB0007CDAEE /* Tf-6500_Band1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F221E987AB0007CDAEE /* Tf-6500_Band1.mp4 */; };
+		3B8E5F671E987AB0007CDAEE /* Tf-6500_Band2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F231E987AB0007CDAEE /* Tf-6500_Band2.mp4 */; };
+		3B8E5F681E987AB0007CDAEE /* Tf-6500_Band3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F241E987AB0007CDAEE /* Tf-6500_Band3.mp4 */; };
+		3B8E5F691E987AB0007CDAEE /* Tf-7000_AllBand.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F251E987AB0007CDAEE /* Tf-7000_AllBand.mp4 */; };
+		3B8E5F6A1E987AB0007CDAEE /* Tf-7000_Band1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F261E987AB0007CDAEE /* Tf-7000_Band1.mp4 */; };
+		3B8E5F6B1E987AB0007CDAEE /* Tf-7000_Band2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F271E987AB0007CDAEE /* Tf-7000_Band2.mp4 */; };
+		3B8E5F6C1E987AB0007CDAEE /* Tf-7000_Band3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F281E987AB0007CDAEE /* Tf-7000_Band3.mp4 */; };
+		3B8E5F6D1E987AB0007CDAEE /* Tf-7500_AllBand.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F291E987AB0007CDAEE /* Tf-7500_AllBand.mp4 */; };
+		3B8E5F6E1E987AB0007CDAEE /* Tf-7500_Band1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F2A1E987AB0007CDAEE /* Tf-7500_Band1.mp4 */; };
+		3B8E5F6F1E987AB0007CDAEE /* Tf-7500_Band2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F2B1E987AB0007CDAEE /* Tf-7500_Band2.mp4 */; };
+		3B8E5F701E987AB0007CDAEE /* Tf-7500_Band3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F2C1E987AB0007CDAEE /* Tf-7500_Band3.mp4 */; };
+		3B8E5F711E987AB0007CDAEE /* Tf-8000_AllBand.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F2D1E987AB0007CDAEE /* Tf-8000_AllBand.mp4 */; };
+		3B8E5F721E987AB0007CDAEE /* Tf-8000_Band1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F2E1E987AB0007CDAEE /* Tf-8000_Band1.mp4 */; };
+		3B8E5F731E987AB0007CDAEE /* Tf-8000_Band2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F2F1E987AB0007CDAEE /* Tf-8000_Band2.mp4 */; };
+		3B8E5F741E987AB0007CDAEE /* Tf-8000_Band3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F301E987AB0007CDAEE /* Tf-8000_Band3.mp4 */; };
+		3B8E5F751E987AB0007CDAEE /* Tf-8500_AllBand.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F311E987AB0007CDAEE /* Tf-8500_AllBand.mp4 */; };
+		3B8E5F761E987AB0007CDAEE /* Tf-8500_Band1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F321E987AB0007CDAEE /* Tf-8500_Band1.mp4 */; };
+		3B8E5F771E987AB0007CDAEE /* Tf-8500_Band2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F331E987AB0007CDAEE /* Tf-8500_Band2.mp4 */; };
+		3B8E5F781E987AB0007CDAEE /* Tf-8500_Band3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F341E987AB0007CDAEE /* Tf-8500_Band3.mp4 */; };
+		3B8E5F791E987AB0007CDAEE /* Tf-9000_AllBand.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F351E987AB0007CDAEE /* Tf-9000_AllBand.mp4 */; };
+		3B8E5F7A1E987AB0007CDAEE /* Tf-9000_Band1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F361E987AB0007CDAEE /* Tf-9000_Band1.mp4 */; };
+		3B8E5F7B1E987AB0007CDAEE /* Tf-9000_Band2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F371E987AB0007CDAEE /* Tf-9000_Band2.mp4 */; };
+		3B8E5F7C1E987AB0007CDAEE /* Tf-9000_Band3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F381E987AB0007CDAEE /* Tf-9000_Band3.mp4 */; };
+		3B8E5F7D1E987AB0007CDAEE /* Tf-9500_AllBand.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F391E987AB0007CDAEE /* Tf-9500_AllBand.mp4 */; };
+		3B8E5F7E1E987AB0007CDAEE /* Tf-9500_Band1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F3A1E987AB0007CDAEE /* Tf-9500_Band1.mp4 */; };
+		3B8E5F7F1E987AB0007CDAEE /* Tf-9500_Band2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F3B1E987AB0007CDAEE /* Tf-9500_Band2.mp4 */; };
+		3B8E5F801E987AB0007CDAEE /* Tf-9500_Band3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F3C1E987AB0007CDAEE /* Tf-9500_Band3.mp4 */; };
+		3B8E5F811E987AB0007CDAEE /* Tf-10000_AllBand.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F3D1E987AB0007CDAEE /* Tf-10000_AllBand.mp4 */; };
+		3B8E5F821E987AB0007CDAEE /* Tf-10000_Band1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F3E1E987AB0007CDAEE /* Tf-10000_Band1.mp4 */; };
+		3B8E5F831E987AB0007CDAEE /* Tf-10000_Band2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F3F1E987AB0007CDAEE /* Tf-10000_Band2.mp4 */; };
+		3B8E5F841E987AB0007CDAEE /* Tf-10000_Band3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5F401E987AB0007CDAEE /* Tf-10000_Band3.mp4 */; };
+		3B8E5F861E987C4D007CDAEE /* ConfirmFrequencySettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8E5F851E987C4D007CDAEE /* ConfirmFrequencySettingViewController.swift */; };
+		3B9F70731DE0BE1300D310DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F70721DE0BE1300D310DB /* AppDelegate.swift */; };
+		3B9F70781DE0BE1300D310DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B9F70761DE0BE1300D310DB /* Main.storyboard */; };
+		3B9F707A1DE0BE1300D310DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B9F70791DE0BE1300D310DB /* Assets.xcassets */; };
+		3B9F707D1DE0BE1300D310DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B9F707B1DE0BE1300D310DB /* LaunchScreen.storyboard */; };
+		3B9F708A1DE0C05300D310DB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F70891DE0C05300D310DB /* LoginViewController.swift */; };
+		3B9F708C1DE0C08100D310DB /* FrequencySettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F708B1DE0C08100D310DB /* FrequencySettingViewController.swift */; };
+		3B9F708F1DE0C09B00D310DB /* VolumeAdjustViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F708E1DE0C09B00D310DB /* VolumeAdjustViewController.swift */; };
+		3B9F70911DE0C0A500D310DB /* SoundBalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F70901DE0C0A500D310DB /* SoundBalanceViewController.swift */; };
+		3B9F70931DE0C0B700D310DB /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F70921DE0C0B700D310DB /* DashboardViewController.swift */; };
+		3B9F70961DE0C13A00D310DB /* BeyondUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F70951DE0C13A00D310DB /* BeyondUIColor.swift */; };
+		3B9F709A1DE0C5E200D310DB /* MKTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F70991DE0C5E200D310DB /* MKTextField.swift */; };
+		3B9F709E1DE0DB0400D310DB /* WideButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F709D1DE0DB0400D310DB /* WideButton.swift */; };
+		3B9F70A01DE0DCDA00D310DB /* BeyondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F709F1DE0DCDA00D310DB /* BeyondView.swift */; };
+		3BFC23DE1DE4F66B00C99035 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFC23DD1DE4F66B00C99035 /* Utility.swift */; };
+		9F78AE851DE3C89F005201BB /* CreateAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F78AE841DE3C89F005201BB /* CreateAccountController.swift */; };
+		9FAA3D4B1DE269D00056776E /* FontProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAA3D4A1DE269D00056776E /* FontProxy.swift */; };
+		9FAA3D4D1DE2E3D20056776E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9FAA3D4C1DE2E3D20056776E /* GoogleService-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3B2F3D381EA3FE2800160C89 /* FrequencyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FrequencyManager.swift; path = Model/FrequencyManager.swift; sourceTree = "<group>"; };
+		3B2F3D3A1EA40D3500160C89 /* VolumeAdjust2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VolumeAdjust2ViewController.swift; path = Controller/VolumeAdjust2ViewController.swift; sourceTree = "<group>"; };
+		3B2F3D3C1EA40DD400160C89 /* VolumeAdjust3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VolumeAdjust3ViewController.swift; path = Controller/VolumeAdjust3ViewController.swift; sourceTree = "<group>"; };
+		3B2F3D3E1EA40E6800160C89 /* FrequencyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FrequencyCell.swift; path = View/FrequencyCell.swift; sourceTree = "<group>"; };
+		3B32E04A1E05FF750025FE98 /* AVTonePlayerUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AVTonePlayerUnit.swift; path = Model/AVTonePlayerUnit.swift; sourceTree = "<group>"; };
+		3B8E5EFD1E987AB0007CDAEE /* Tf-2000_AllBand.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-2000_AllBand.mp4"; sourceTree = "<group>"; };
+		3B8E5EFE1E987AB0007CDAEE /* Tf-2000_Band1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-2000_Band1.mp4"; sourceTree = "<group>"; };
+		3B8E5EFF1E987AB0007CDAEE /* Tf-2000_Band2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-2000_Band2.mp4"; sourceTree = "<group>"; };
+		3B8E5F001E987AB0007CDAEE /* Tf-2000_Band3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-2000_Band3.mp4"; sourceTree = "<group>"; };
+		3B8E5F011E987AB0007CDAEE /* Tf-2500_AllBand.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-2500_AllBand.mp4"; sourceTree = "<group>"; };
+		3B8E5F021E987AB0007CDAEE /* Tf-2500_Band1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-2500_Band1.mp4"; sourceTree = "<group>"; };
+		3B8E5F031E987AB0007CDAEE /* Tf-2500_Band2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-2500_Band2.mp4"; sourceTree = "<group>"; };
+		3B8E5F041E987AB0007CDAEE /* Tf-2500_Band3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-2500_Band3.mp4"; sourceTree = "<group>"; };
+		3B8E5F051E987AB0007CDAEE /* Tf-3000_AllBand.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-3000_AllBand.mp4"; sourceTree = "<group>"; };
+		3B8E5F061E987AB0007CDAEE /* Tf-3000_Band1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-3000_Band1.mp4"; sourceTree = "<group>"; };
+		3B8E5F071E987AB0007CDAEE /* Tf-3000_Band2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-3000_Band2.mp4"; sourceTree = "<group>"; };
+		3B8E5F081E987AB0007CDAEE /* Tf-3000_Band3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-3000_Band3.mp4"; sourceTree = "<group>"; };
+		3B8E5F091E987AB0007CDAEE /* Tf-3500_AllBand.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-3500_AllBand.mp4"; sourceTree = "<group>"; };
+		3B8E5F0A1E987AB0007CDAEE /* Tf-3500_Band1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-3500_Band1.mp4"; sourceTree = "<group>"; };
+		3B8E5F0B1E987AB0007CDAEE /* Tf-3500_Band2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-3500_Band2.mp4"; sourceTree = "<group>"; };
+		3B8E5F0C1E987AB0007CDAEE /* Tf-3500_Band3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-3500_Band3.mp4"; sourceTree = "<group>"; };
+		3B8E5F0D1E987AB0007CDAEE /* Tf-4000_AllBand.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-4000_AllBand.mp4"; sourceTree = "<group>"; };
+		3B8E5F0E1E987AB0007CDAEE /* Tf-4000_Band1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-4000_Band1.mp4"; sourceTree = "<group>"; };
+		3B8E5F0F1E987AB0007CDAEE /* Tf-4000_Band2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-4000_Band2.mp4"; sourceTree = "<group>"; };
+		3B8E5F101E987AB0007CDAEE /* Tf-4000_Band3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-4000_Band3.mp4"; sourceTree = "<group>"; };
+		3B8E5F111E987AB0007CDAEE /* Tf-4500_AllBand.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-4500_AllBand.mp4"; sourceTree = "<group>"; };
+		3B8E5F121E987AB0007CDAEE /* Tf-4500_Band1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-4500_Band1.mp4"; sourceTree = "<group>"; };
+		3B8E5F131E987AB0007CDAEE /* Tf-4500_Band2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-4500_Band2.mp4"; sourceTree = "<group>"; };
+		3B8E5F141E987AB0007CDAEE /* Tf-4500_Band3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-4500_Band3.mp4"; sourceTree = "<group>"; };
+		3B8E5F151E987AB0007CDAEE /* Tf-5000_AllBand.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-5000_AllBand.mp4"; sourceTree = "<group>"; };
+		3B8E5F161E987AB0007CDAEE /* Tf-5000_Band1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-5000_Band1.mp4"; sourceTree = "<group>"; };
+		3B8E5F171E987AB0007CDAEE /* Tf-5000_Band2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-5000_Band2.mp4"; sourceTree = "<group>"; };
+		3B8E5F181E987AB0007CDAEE /* Tf-5000_Band3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-5000_Band3.mp4"; sourceTree = "<group>"; };
+		3B8E5F191E987AB0007CDAEE /* Tf-5500_AllBand.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-5500_AllBand.mp4"; sourceTree = "<group>"; };
+		3B8E5F1A1E987AB0007CDAEE /* Tf-5500_Band1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-5500_Band1.mp4"; sourceTree = "<group>"; };
+		3B8E5F1B1E987AB0007CDAEE /* Tf-5500_Band2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-5500_Band2.mp4"; sourceTree = "<group>"; };
+		3B8E5F1C1E987AB0007CDAEE /* Tf-5500_Band3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-5500_Band3.mp4"; sourceTree = "<group>"; };
+		3B8E5F1D1E987AB0007CDAEE /* Tf-6000_AllBand.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-6000_AllBand.mp4"; sourceTree = "<group>"; };
+		3B8E5F1E1E987AB0007CDAEE /* Tf-6000_Band1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-6000_Band1.mp4"; sourceTree = "<group>"; };
+		3B8E5F1F1E987AB0007CDAEE /* Tf-6000_Band2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-6000_Band2.mp4"; sourceTree = "<group>"; };
+		3B8E5F201E987AB0007CDAEE /* Tf-6000_Band3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-6000_Band3.mp4"; sourceTree = "<group>"; };
+		3B8E5F211E987AB0007CDAEE /* Tf-6500_AllBand.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-6500_AllBand.mp4"; sourceTree = "<group>"; };
+		3B8E5F221E987AB0007CDAEE /* Tf-6500_Band1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-6500_Band1.mp4"; sourceTree = "<group>"; };
+		3B8E5F231E987AB0007CDAEE /* Tf-6500_Band2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-6500_Band2.mp4"; sourceTree = "<group>"; };
+		3B8E5F241E987AB0007CDAEE /* Tf-6500_Band3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-6500_Band3.mp4"; sourceTree = "<group>"; };
+		3B8E5F251E987AB0007CDAEE /* Tf-7000_AllBand.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-7000_AllBand.mp4"; sourceTree = "<group>"; };
+		3B8E5F261E987AB0007CDAEE /* Tf-7000_Band1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-7000_Band1.mp4"; sourceTree = "<group>"; };
+		3B8E5F271E987AB0007CDAEE /* Tf-7000_Band2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-7000_Band2.mp4"; sourceTree = "<group>"; };
+		3B8E5F281E987AB0007CDAEE /* Tf-7000_Band3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-7000_Band3.mp4"; sourceTree = "<group>"; };
+		3B8E5F291E987AB0007CDAEE /* Tf-7500_AllBand.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-7500_AllBand.mp4"; sourceTree = "<group>"; };
+		3B8E5F2A1E987AB0007CDAEE /* Tf-7500_Band1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-7500_Band1.mp4"; sourceTree = "<group>"; };
+		3B8E5F2B1E987AB0007CDAEE /* Tf-7500_Band2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-7500_Band2.mp4"; sourceTree = "<group>"; };
+		3B8E5F2C1E987AB0007CDAEE /* Tf-7500_Band3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-7500_Band3.mp4"; sourceTree = "<group>"; };
+		3B8E5F2D1E987AB0007CDAEE /* Tf-8000_AllBand.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-8000_AllBand.mp4"; sourceTree = "<group>"; };
+		3B8E5F2E1E987AB0007CDAEE /* Tf-8000_Band1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-8000_Band1.mp4"; sourceTree = "<group>"; };
+		3B8E5F2F1E987AB0007CDAEE /* Tf-8000_Band2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-8000_Band2.mp4"; sourceTree = "<group>"; };
+		3B8E5F301E987AB0007CDAEE /* Tf-8000_Band3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-8000_Band3.mp4"; sourceTree = "<group>"; };
+		3B8E5F311E987AB0007CDAEE /* Tf-8500_AllBand.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-8500_AllBand.mp4"; sourceTree = "<group>"; };
+		3B8E5F321E987AB0007CDAEE /* Tf-8500_Band1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-8500_Band1.mp4"; sourceTree = "<group>"; };
+		3B8E5F331E987AB0007CDAEE /* Tf-8500_Band2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-8500_Band2.mp4"; sourceTree = "<group>"; };
+		3B8E5F341E987AB0007CDAEE /* Tf-8500_Band3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-8500_Band3.mp4"; sourceTree = "<group>"; };
+		3B8E5F351E987AB0007CDAEE /* Tf-9000_AllBand.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-9000_AllBand.mp4"; sourceTree = "<group>"; };
+		3B8E5F361E987AB0007CDAEE /* Tf-9000_Band1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-9000_Band1.mp4"; sourceTree = "<group>"; };
+		3B8E5F371E987AB0007CDAEE /* Tf-9000_Band2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-9000_Band2.mp4"; sourceTree = "<group>"; };
+		3B8E5F381E987AB0007CDAEE /* Tf-9000_Band3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-9000_Band3.mp4"; sourceTree = "<group>"; };
+		3B8E5F391E987AB0007CDAEE /* Tf-9500_AllBand.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-9500_AllBand.mp4"; sourceTree = "<group>"; };
+		3B8E5F3A1E987AB0007CDAEE /* Tf-9500_Band1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-9500_Band1.mp4"; sourceTree = "<group>"; };
+		3B8E5F3B1E987AB0007CDAEE /* Tf-9500_Band2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-9500_Band2.mp4"; sourceTree = "<group>"; };
+		3B8E5F3C1E987AB0007CDAEE /* Tf-9500_Band3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-9500_Band3.mp4"; sourceTree = "<group>"; };
+		3B8E5F3D1E987AB0007CDAEE /* Tf-10000_AllBand.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-10000_AllBand.mp4"; sourceTree = "<group>"; };
+		3B8E5F3E1E987AB0007CDAEE /* Tf-10000_Band1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-10000_Band1.mp4"; sourceTree = "<group>"; };
+		3B8E5F3F1E987AB0007CDAEE /* Tf-10000_Band2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-10000_Band2.mp4"; sourceTree = "<group>"; };
+		3B8E5F401E987AB0007CDAEE /* Tf-10000_Band3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-10000_Band3.mp4"; sourceTree = "<group>"; };
+		3B8E5F851E987C4D007CDAEE /* ConfirmFrequencySettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConfirmFrequencySettingViewController.swift; path = Controller/ConfirmFrequencySettingViewController.swift; sourceTree = "<group>"; };
+		3B9F706F1DE0BE1300D310DB /* BeyondTinnitus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeyondTinnitus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B9F70721DE0BE1300D310DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3B9F70771DE0BE1300D310DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3B9F70791DE0BE1300D310DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3B9F707C1DE0BE1300D310DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3B9F707E1DE0BE1300D310DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B9F70891DE0C05300D310DB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controller/LoginViewController.swift; sourceTree = "<group>"; };
+		3B9F708B1DE0C08100D310DB /* FrequencySettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FrequencySettingViewController.swift; path = Controller/FrequencySettingViewController.swift; sourceTree = "<group>"; };
+		3B9F708E1DE0C09B00D310DB /* VolumeAdjustViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VolumeAdjustViewController.swift; path = Controller/VolumeAdjustViewController.swift; sourceTree = "<group>"; };
+		3B9F70901DE0C0A500D310DB /* SoundBalanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SoundBalanceViewController.swift; path = Controller/SoundBalanceViewController.swift; sourceTree = "<group>"; };
+		3B9F70921DE0C0B700D310DB /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardViewController.swift; path = Controller/DashboardViewController.swift; sourceTree = "<group>"; };
+		3B9F70951DE0C13A00D310DB /* BeyondUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BeyondUIColor.swift; path = Utility/BeyondUIColor.swift; sourceTree = "<group>"; };
+		3B9F70991DE0C5E200D310DB /* MKTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MKTextField.swift; path = View/MKTextField.swift; sourceTree = "<group>"; };
+		3B9F709D1DE0DB0400D310DB /* WideButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WideButton.swift; path = View/WideButton.swift; sourceTree = "<group>"; };
+		3B9F709F1DE0DCDA00D310DB /* BeyondView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BeyondView.swift; path = View/BeyondView.swift; sourceTree = "<group>"; };
+		3BFC23DD1DE4F66B00C99035 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = Utility/Utility.swift; sourceTree = "<group>"; };
+		41AE24CF397F787A8726DA58 /* Pods-BeyondTinnitus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeyondTinnitus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeyondTinnitus/Pods-BeyondTinnitus.debug.xcconfig"; sourceTree = "<group>"; };
+		871D7F10BA30E569F4501BF6 /* Pods-BeyondTinnitus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeyondTinnitus.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeyondTinnitus/Pods-BeyondTinnitus.release.xcconfig"; sourceTree = "<group>"; };
+		9F78AE841DE3C89F005201BB /* CreateAccountController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateAccountController.swift; path = Controller/CreateAccountController.swift; sourceTree = "<group>"; };
+		9FAA3D4A1DE269D00056776E /* FontProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FontProxy.swift; path = View/FontProxy.swift; sourceTree = "<group>"; };
+		9FAA3D4C1DE2E3D20056776E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E75C496BD7ACEF8F38573D54 /* Pods_BeyondTinnitus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeyondTinnitus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3B9F706C1DE0BE1300D310DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BCC2546AEFFFF890BAF348A /* Pods_BeyondTinnitus.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		170180071623BD5CEFAD0511 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E75C496BD7ACEF8F38573D54 /* Pods_BeyondTinnitus.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B9F70661DE0BE1300D310DB = {
+			isa = PBXGroup;
+			children = (
+				3B9F70711DE0BE1300D310DB /* BeyondTinnitus */,
+				3B9F70701DE0BE1300D310DB /* Products */,
+				584D9DBEE6E1AFA37593333F /* Pods */,
+				170180071623BD5CEFAD0511 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3B9F70701DE0BE1300D310DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B9F706F1DE0BE1300D310DB /* BeyondTinnitus.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B9F70711DE0BE1300D310DB /* BeyondTinnitus */ = {
+			isa = PBXGroup;
+			children = (
+				3BE6EB421E493592000B450A /* audio_assets */,
+				3B9F70941DE0C12900D310DB /* Utility */,
+				3B9F70881DE0C04700D310DB /* Controller */,
+				3B9F70871DE0C04000D310DB /* View */,
+				3B9F70861DE0C03B00D310DB /* Model */,
+				3B9F70721DE0BE1300D310DB /* AppDelegate.swift */,
+				3B9F70761DE0BE1300D310DB /* Main.storyboard */,
+				3B9F70791DE0BE1300D310DB /* Assets.xcassets */,
+				3B9F707B1DE0BE1300D310DB /* LaunchScreen.storyboard */,
+				3B9F707E1DE0BE1300D310DB /* Info.plist */,
+				9FAA3D4C1DE2E3D20056776E /* GoogleService-Info.plist */,
+			);
+			path = BeyondTinnitus;
+			sourceTree = "<group>";
+		};
+		3B9F70861DE0C03B00D310DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3B32E04A1E05FF750025FE98 /* AVTonePlayerUnit.swift */,
+				3B2F3D381EA3FE2800160C89 /* FrequencyManager.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3B9F70871DE0C04000D310DB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3B9F709D1DE0DB0400D310DB /* WideButton.swift */,
+				3B9F709F1DE0DCDA00D310DB /* BeyondView.swift */,
+				3B2F3D3E1EA40E6800160C89 /* FrequencyCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		3B9F70881DE0C04700D310DB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9F78AE841DE3C89F005201BB /* CreateAccountController.swift */,
+				3B9F70891DE0C05300D310DB /* LoginViewController.swift */,
+				3B9F708B1DE0C08100D310DB /* FrequencySettingViewController.swift */,
+				3B8E5F851E987C4D007CDAEE /* ConfirmFrequencySettingViewController.swift */,
+				3B9F708E1DE0C09B00D310DB /* VolumeAdjustViewController.swift */,
+				3B2F3D3A1EA40D3500160C89 /* VolumeAdjust2ViewController.swift */,
+				3B2F3D3C1EA40DD400160C89 /* VolumeAdjust3ViewController.swift */,
+				3B9F70901DE0C0A500D310DB /* SoundBalanceViewController.swift */,
+				3B9F70921DE0C0B700D310DB /* DashboardViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		3B9F70941DE0C12900D310DB /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				3B9F70951DE0C13A00D310DB /* BeyondUIColor.swift */,
+				3B9F70991DE0C5E200D310DB /* MKTextField.swift */,
+				9FAA3D4A1DE269D00056776E /* FontProxy.swift */,
+				3BFC23DD1DE4F66B00C99035 /* Utility.swift */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		3BE6EB421E493592000B450A /* audio_assets */ = {
+			isa = PBXGroup;
+			children = (
+				3B8E5EFD1E987AB0007CDAEE /* Tf-2000_AllBand.mp4 */,
+				3B8E5EFE1E987AB0007CDAEE /* Tf-2000_Band1.mp4 */,
+				3B8E5EFF1E987AB0007CDAEE /* Tf-2000_Band2.mp4 */,
+				3B8E5F001E987AB0007CDAEE /* Tf-2000_Band3.mp4 */,
+				3B8E5F011E987AB0007CDAEE /* Tf-2500_AllBand.mp4 */,
+				3B8E5F021E987AB0007CDAEE /* Tf-2500_Band1.mp4 */,
+				3B8E5F031E987AB0007CDAEE /* Tf-2500_Band2.mp4 */,
+				3B8E5F041E987AB0007CDAEE /* Tf-2500_Band3.mp4 */,
+				3B8E5F051E987AB0007CDAEE /* Tf-3000_AllBand.mp4 */,
+				3B8E5F061E987AB0007CDAEE /* Tf-3000_Band1.mp4 */,
+				3B8E5F071E987AB0007CDAEE /* Tf-3000_Band2.mp4 */,
+				3B8E5F081E987AB0007CDAEE /* Tf-3000_Band3.mp4 */,
+				3B8E5F091E987AB0007CDAEE /* Tf-3500_AllBand.mp4 */,
+				3B8E5F0A1E987AB0007CDAEE /* Tf-3500_Band1.mp4 */,
+				3B8E5F0B1E987AB0007CDAEE /* Tf-3500_Band2.mp4 */,
+				3B8E5F0C1E987AB0007CDAEE /* Tf-3500_Band3.mp4 */,
+				3B8E5F0D1E987AB0007CDAEE /* Tf-4000_AllBand.mp4 */,
+				3B8E5F0E1E987AB0007CDAEE /* Tf-4000_Band1.mp4 */,
+				3B8E5F0F1E987AB0007CDAEE /* Tf-4000_Band2.mp4 */,
+				3B8E5F101E987AB0007CDAEE /* Tf-4000_Band3.mp4 */,
+				3B8E5F111E987AB0007CDAEE /* Tf-4500_AllBand.mp4 */,
+				3B8E5F121E987AB0007CDAEE /* Tf-4500_Band1.mp4 */,
+				3B8E5F131E987AB0007CDAEE /* Tf-4500_Band2.mp4 */,
+				3B8E5F141E987AB0007CDAEE /* Tf-4500_Band3.mp4 */,
+				3B8E5F151E987AB0007CDAEE /* Tf-5000_AllBand.mp4 */,
+				3B8E5F161E987AB0007CDAEE /* Tf-5000_Band1.mp4 */,
+				3B8E5F171E987AB0007CDAEE /* Tf-5000_Band2.mp4 */,
+				3B8E5F181E987AB0007CDAEE /* Tf-5000_Band3.mp4 */,
+				3B8E5F191E987AB0007CDAEE /* Tf-5500_AllBand.mp4 */,
+				3B8E5F1A1E987AB0007CDAEE /* Tf-5500_Band1.mp4 */,
+				3B8E5F1B1E987AB0007CDAEE /* Tf-5500_Band2.mp4 */,
+				3B8E5F1C1E987AB0007CDAEE /* Tf-5500_Band3.mp4 */,
+				3B8E5F1D1E987AB0007CDAEE /* Tf-6000_AllBand.mp4 */,
+				3B8E5F1E1E987AB0007CDAEE /* Tf-6000_Band1.mp4 */,
+				3B8E5F1F1E987AB0007CDAEE /* Tf-6000_Band2.mp4 */,
+				3B8E5F201E987AB0007CDAEE /* Tf-6000_Band3.mp4 */,
+				3B8E5F211E987AB0007CDAEE /* Tf-6500_AllBand.mp4 */,
+				3B8E5F221E987AB0007CDAEE /* Tf-6500_Band1.mp4 */,
+				3B8E5F231E987AB0007CDAEE /* Tf-6500_Band2.mp4 */,
+				3B8E5F241E987AB0007CDAEE /* Tf-6500_Band3.mp4 */,
+				3B8E5F251E987AB0007CDAEE /* Tf-7000_AllBand.mp4 */,
+				3B8E5F261E987AB0007CDAEE /* Tf-7000_Band1.mp4 */,
+				3B8E5F271E987AB0007CDAEE /* Tf-7000_Band2.mp4 */,
+				3B8E5F281E987AB0007CDAEE /* Tf-7000_Band3.mp4 */,
+				3B8E5F291E987AB0007CDAEE /* Tf-7500_AllBand.mp4 */,
+				3B8E5F2A1E987AB0007CDAEE /* Tf-7500_Band1.mp4 */,
+				3B8E5F2B1E987AB0007CDAEE /* Tf-7500_Band2.mp4 */,
+				3B8E5F2C1E987AB0007CDAEE /* Tf-7500_Band3.mp4 */,
+				3B8E5F2D1E987AB0007CDAEE /* Tf-8000_AllBand.mp4 */,
+				3B8E5F2E1E987AB0007CDAEE /* Tf-8000_Band1.mp4 */,
+				3B8E5F2F1E987AB0007CDAEE /* Tf-8000_Band2.mp4 */,
+				3B8E5F301E987AB0007CDAEE /* Tf-8000_Band3.mp4 */,
+				3B8E5F311E987AB0007CDAEE /* Tf-8500_AllBand.mp4 */,
+				3B8E5F321E987AB0007CDAEE /* Tf-8500_Band1.mp4 */,
+				3B8E5F331E987AB0007CDAEE /* Tf-8500_Band2.mp4 */,
+				3B8E5F341E987AB0007CDAEE /* Tf-8500_Band3.mp4 */,
+				3B8E5F351E987AB0007CDAEE /* Tf-9000_AllBand.mp4 */,
+				3B8E5F361E987AB0007CDAEE /* Tf-9000_Band1.mp4 */,
+				3B8E5F371E987AB0007CDAEE /* Tf-9000_Band2.mp4 */,
+				3B8E5F381E987AB0007CDAEE /* Tf-9000_Band3.mp4 */,
+				3B8E5F391E987AB0007CDAEE /* Tf-9500_AllBand.mp4 */,
+				3B8E5F3A1E987AB0007CDAEE /* Tf-9500_Band1.mp4 */,
+				3B8E5F3B1E987AB0007CDAEE /* Tf-9500_Band2.mp4 */,
+				3B8E5F3C1E987AB0007CDAEE /* Tf-9500_Band3.mp4 */,
+				3B8E5F3D1E987AB0007CDAEE /* Tf-10000_AllBand.mp4 */,
+				3B8E5F3E1E987AB0007CDAEE /* Tf-10000_Band1.mp4 */,
+				3B8E5F3F1E987AB0007CDAEE /* Tf-10000_Band2.mp4 */,
+				3B8E5F401E987AB0007CDAEE /* Tf-10000_Band3.mp4 */,
+			);
+			name = audio_assets;
+			sourceTree = "<group>";
+		};
+		584D9DBEE6E1AFA37593333F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				41AE24CF397F787A8726DA58 /* Pods-BeyondTinnitus.debug.xcconfig */,
+				871D7F10BA30E569F4501BF6 /* Pods-BeyondTinnitus.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3B9F706E1DE0BE1300D310DB /* BeyondTinnitus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B9F70811DE0BE1300D310DB /* Build configuration list for PBXNativeTarget "BeyondTinnitus" */;
+			buildPhases = (
+				5B8A20211779BFEE338D0780 /* [CP] Check Pods Manifest.lock */,
+				3B9F706B1DE0BE1300D310DB /* Sources */,
+				3B9F706C1DE0BE1300D310DB /* Frameworks */,
+				3B9F706D1DE0BE1300D310DB /* Resources */,
+				D6B6CF60290E2FD8C3870CA7 /* [CP] Embed Pods Frameworks */,
+				2D98786C081A3BEF6777B61A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BeyondTinnitus;
+			productName = BeyondTinnitusv2;
+			productReference = 3B9F706F1DE0BE1300D310DB /* BeyondTinnitus.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3B9F70671DE0BE1300D310DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "";
+				TargetAttributes = {
+					3B9F706E1DE0BE1300D310DB = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = Q8R76S2QE8;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 3B9F706A1DE0BE1300D310DB /* Build configuration list for PBXProject "BeyondTinnitus" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3B9F70661DE0BE1300D310DB;
+			productRefGroup = 3B9F70701DE0BE1300D310DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3B9F706E1DE0BE1300D310DB /* BeyondTinnitus */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3B9F706D1DE0BE1300D310DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B8E5F841E987AB0007CDAEE /* Tf-10000_Band3.mp4 in Resources */,
+				3B8E5F6F1E987AB0007CDAEE /* Tf-7500_Band2.mp4 in Resources */,
+				3B8E5F4E1E987AB0007CDAEE /* Tf-3500_Band1.mp4 in Resources */,
+				3B8E5F691E987AB0007CDAEE /* Tf-7000_AllBand.mp4 in Resources */,
+				3B8E5F7A1E987AB0007CDAEE /* Tf-9000_Band1.mp4 in Resources */,
+				3B8E5F681E987AB0007CDAEE /* Tf-6500_Band3.mp4 in Resources */,
+				3B8E5F671E987AB0007CDAEE /* Tf-6500_Band2.mp4 in Resources */,
+				3B8E5F441E987AB0007CDAEE /* Tf-2000_Band3.mp4 in Resources */,
+				3B8E5F7C1E987AB0007CDAEE /* Tf-9000_Band3.mp4 in Resources */,
+				3B8E5F701E987AB0007CDAEE /* Tf-7500_Band3.mp4 in Resources */,
+				3B8E5F771E987AB0007CDAEE /* Tf-8500_Band2.mp4 in Resources */,
+				3B8E5F6C1E987AB0007CDAEE /* Tf-7000_Band3.mp4 in Resources */,
+				3B8E5F501E987AB0007CDAEE /* Tf-3500_Band3.mp4 in Resources */,
+				3B8E5F5C1E987AB0007CDAEE /* Tf-5000_Band3.mp4 in Resources */,
+				3B8E5F601E987AB0007CDAEE /* Tf-5500_Band3.mp4 in Resources */,
+				3B8E5F7E1E987AB0007CDAEE /* Tf-9500_Band1.mp4 in Resources */,
+				3B8E5F561E987AB0007CDAEE /* Tf-4500_Band1.mp4 in Resources */,
+				3B8E5F4C1E987AB0007CDAEE /* Tf-3000_Band3.mp4 in Resources */,
+				3B8E5F5F1E987AB0007CDAEE /* Tf-5500_Band2.mp4 in Resources */,
+				3B8E5F611E987AB0007CDAEE /* Tf-6000_AllBand.mp4 in Resources */,
+				3B8E5F531E987AB0007CDAEE /* Tf-4000_Band2.mp4 in Resources */,
+				3B8E5F4F1E987AB0007CDAEE /* Tf-3500_Band2.mp4 in Resources */,
+				3B8E5F551E987AB0007CDAEE /* Tf-4500_AllBand.mp4 in Resources */,
+				3B8E5F451E987AB0007CDAEE /* Tf-2500_AllBand.mp4 in Resources */,
+				3B9F707D1DE0BE1300D310DB /* LaunchScreen.storyboard in Resources */,
+				9FAA3D4D1DE2E3D20056776E /* GoogleService-Info.plist in Resources */,
+				3B8E5F421E987AB0007CDAEE /* Tf-2000_Band1.mp4 in Resources */,
+				3B8E5F741E987AB0007CDAEE /* Tf-8000_Band3.mp4 in Resources */,
+				3B8E5F7B1E987AB0007CDAEE /* Tf-9000_Band2.mp4 in Resources */,
+				3B8E5F591E987AB0007CDAEE /* Tf-5000_AllBand.mp4 in Resources */,
+				3B8E5F541E987AB0007CDAEE /* Tf-4000_Band3.mp4 in Resources */,
+				3B8E5F5D1E987AB0007CDAEE /* Tf-5500_AllBand.mp4 in Resources */,
+				3B8E5F7D1E987AB0007CDAEE /* Tf-9500_AllBand.mp4 in Resources */,
+				3B8E5F6B1E987AB0007CDAEE /* Tf-7000_Band2.mp4 in Resources */,
+				3B9F707A1DE0BE1300D310DB /* Assets.xcassets in Resources */,
+				3B8E5F641E987AB0007CDAEE /* Tf-6000_Band3.mp4 in Resources */,
+				3B8E5F6E1E987AB0007CDAEE /* Tf-7500_Band1.mp4 in Resources */,
+				3B8E5F821E987AB0007CDAEE /* Tf-10000_Band1.mp4 in Resources */,
+				3B8E5F471E987AB0007CDAEE /* Tf-2500_Band2.mp4 in Resources */,
+				3B8E5F831E987AB0007CDAEE /* Tf-10000_Band2.mp4 in Resources */,
+				3B8E5F6D1E987AB0007CDAEE /* Tf-7500_AllBand.mp4 in Resources */,
+				3B8E5F751E987AB0007CDAEE /* Tf-8500_AllBand.mp4 in Resources */,
+				3B8E5F4B1E987AB0007CDAEE /* Tf-3000_Band2.mp4 in Resources */,
+				3B8E5F711E987AB0007CDAEE /* Tf-8000_AllBand.mp4 in Resources */,
+				3B8E5F411E987AB0007CDAEE /* Tf-2000_AllBand.mp4 in Resources */,
+				3B8E5F721E987AB0007CDAEE /* Tf-8000_Band1.mp4 in Resources */,
+				3B8E5F7F1E987AB0007CDAEE /* Tf-9500_Band2.mp4 in Resources */,
+				3B8E5F5E1E987AB0007CDAEE /* Tf-5500_Band1.mp4 in Resources */,
+				3B8E5F811E987AB0007CDAEE /* Tf-10000_AllBand.mp4 in Resources */,
+				3B8E5F781E987AB0007CDAEE /* Tf-8500_Band3.mp4 in Resources */,
+				3B8E5F431E987AB0007CDAEE /* Tf-2000_Band2.mp4 in Resources */,
+				3B8E5F481E987AB0007CDAEE /* Tf-2500_Band3.mp4 in Resources */,
+				3B8E5F801E987AB0007CDAEE /* Tf-9500_Band3.mp4 in Resources */,
+				3B8E5F581E987AB0007CDAEE /* Tf-4500_Band3.mp4 in Resources */,
+				3B8E5F6A1E987AB0007CDAEE /* Tf-7000_Band1.mp4 in Resources */,
+				3B8E5F631E987AB0007CDAEE /* Tf-6000_Band2.mp4 in Resources */,
+				3B8E5F5B1E987AB0007CDAEE /* Tf-5000_Band2.mp4 in Resources */,
+				3B8E5F491E987AB0007CDAEE /* Tf-3000_AllBand.mp4 in Resources */,
+				3B8E5F651E987AB0007CDAEE /* Tf-6500_AllBand.mp4 in Resources */,
+				3B8E5F571E987AB0007CDAEE /* Tf-4500_Band2.mp4 in Resources */,
+				3B9F70781DE0BE1300D310DB /* Main.storyboard in Resources */,
+				3B8E5F4D1E987AB0007CDAEE /* Tf-3500_AllBand.mp4 in Resources */,
+				3B8E5F621E987AB0007CDAEE /* Tf-6000_Band1.mp4 in Resources */,
+				3B8E5F461E987AB0007CDAEE /* Tf-2500_Band1.mp4 in Resources */,
+				3B8E5F661E987AB0007CDAEE /* Tf-6500_Band1.mp4 in Resources */,
+				3B8E5F4A1E987AB0007CDAEE /* Tf-3000_Band1.mp4 in Resources */,
+				3B8E5F5A1E987AB0007CDAEE /* Tf-5000_Band1.mp4 in Resources */,
+				3B8E5F521E987AB0007CDAEE /* Tf-4000_Band1.mp4 in Resources */,
+				3B8E5F761E987AB0007CDAEE /* Tf-8500_Band1.mp4 in Resources */,
+				3B8E5F791E987AB0007CDAEE /* Tf-9000_AllBand.mp4 in Resources */,
+				3B8E5F511E987AB0007CDAEE /* Tf-4000_AllBand.mp4 in Resources */,
+				3B8E5F731E987AB0007CDAEE /* Tf-8000_Band2.mp4 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D98786C081A3BEF6777B61A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeyondTinnitus/Pods-BeyondTinnitus-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B8A20211779BFEE338D0780 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D6B6CF60290E2FD8C3870CA7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeyondTinnitus/Pods-BeyondTinnitus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3B9F706B1DE0BE1300D310DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B2F3D3F1EA40E6800160C89 /* FrequencyCell.swift in Sources */,
+				3B2F3D391EA3FE2800160C89 /* FrequencyManager.swift in Sources */,
+				3BFC23DE1DE4F66B00C99035 /* Utility.swift in Sources */,
+				3B9F709A1DE0C5E200D310DB /* MKTextField.swift in Sources */,
+				3B9F708C1DE0C08100D310DB /* FrequencySettingViewController.swift in Sources */,
+				3B9F708A1DE0C05300D310DB /* LoginViewController.swift in Sources */,
+				3B9F708F1DE0C09B00D310DB /* VolumeAdjustViewController.swift in Sources */,
+				3B2F3D3B1EA40D3500160C89 /* VolumeAdjust2ViewController.swift in Sources */,
+				3B9F70731DE0BE1300D310DB /* AppDelegate.swift in Sources */,
+				3B32E04B1E05FF750025FE98 /* AVTonePlayerUnit.swift in Sources */,
+				9F78AE851DE3C89F005201BB /* CreateAccountController.swift in Sources */,
+				3B9F709E1DE0DB0400D310DB /* WideButton.swift in Sources */,
+				3B2F3D3D1EA40DD400160C89 /* VolumeAdjust3ViewController.swift in Sources */,
+				3B8E5F861E987C4D007CDAEE /* ConfirmFrequencySettingViewController.swift in Sources */,
+				3B9F70911DE0C0A500D310DB /* SoundBalanceViewController.swift in Sources */,
+				3B9F70961DE0C13A00D310DB /* BeyondUIColor.swift in Sources */,
+				3B9F70931DE0C0B700D310DB /* DashboardViewController.swift in Sources */,
+				9FAA3D4B1DE269D00056776E /* FontProxy.swift in Sources */,
+				3B9F70A01DE0DCDA00D310DB /* BeyondView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3B9F70761DE0BE1300D310DB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B9F70771DE0BE1300D310DB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3B9F707B1DE0BE1300D310DB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B9F707C1DE0BE1300D310DB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3B9F707F1DE0BE1300D310DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3B9F70801DE0BE1300D310DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3B9F70821DE0BE1300D310DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41AE24CF397F787A8726DA58 /* Pods-BeyondTinnitus.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Q8R76S2QE8;
+				INFOPLIST_FILE = BeyondTinnitus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.BeyondTinnitus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3B9F70831DE0BE1300D310DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 871D7F10BA30E569F4501BF6 /* Pods-BeyondTinnitus.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Q8R76S2QE8;
+				INFOPLIST_FILE = BeyondTinnitus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.BeyondTinnitus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3B9F706A1DE0BE1300D310DB /* Build configuration list for PBXProject "BeyondTinnitus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B9F707F1DE0BE1300D310DB /* Debug */,
+				3B9F70801DE0BE1300D310DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B9F70811DE0BE1300D310DB /* Build configuration list for PBXNativeTarget "BeyondTinnitus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B9F70821DE0BE1300D310DB /* Debug */,
+				3B9F70831DE0BE1300D310DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3B9F70671DE0BE1300D310DB /* Project object */;
+}

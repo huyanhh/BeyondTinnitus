@@ -1,6 +1,0 @@
-framework module Pods_BeyondTinnitusv2 {
-  umbrella header "Pods-BeyondTinnitusv2-umbrella.h"
-
-  export *
-  module * { export * }
-}
