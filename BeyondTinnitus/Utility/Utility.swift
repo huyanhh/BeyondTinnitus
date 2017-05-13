@@ -21,9 +21,9 @@ extension UIViewController {
 }
 
 struct Utility {
-    static func alert(message: String, vc: UIViewController) {
+    static func alert(message: String, vc: UIViewController, handler: ((UIAlertAction) -> Void)? = nil) {
         let alert = UIAlertController(title: "Whoops...", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: handler))
         vc.present(alert, animated: true, completion: nil)
     }
 }

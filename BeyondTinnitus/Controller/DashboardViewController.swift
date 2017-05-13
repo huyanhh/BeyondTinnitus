@@ -25,6 +25,8 @@ class DashboardViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        tableView.isScrollEnabled = false
+        
         if let savedManager = loadToneSettings() {
             print("loading settings")
             manager = savedManager

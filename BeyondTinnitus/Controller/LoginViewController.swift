@@ -19,7 +19,7 @@ class LoginViewController: UIViewController {
     @IBAction func signIn() {
         guard let onboardVC = self.storyboard?.instantiateViewController(withIdentifier: "main") as? UINavigationController
             else { fatalError() }
-        guard let dashboardVC = self.storyboard?.instantiateViewController(withIdentifier: "dashboard") as? DashboardViewController
+        guard let dashboardVC = self.storyboard?.instantiateViewController(withIdentifier: "tab_bar") as? UITabBarController
             else { fatalError() }
         
 //        if !UserDefaults.standard.bool(forKey: "onboard") {

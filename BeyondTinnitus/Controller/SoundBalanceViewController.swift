@@ -24,7 +24,7 @@ class SoundBalanceViewController: UIViewController {
         UserDefaults.standard.set(true, forKey: "onboard")
         UserDefaults.standard.synchronize()
         
-        guard let dashboardVC = self.storyboard?.instantiateViewController(withIdentifier: "dashboard") as? DashboardViewController
+        guard let dashboardVC = self.storyboard?.instantiateViewController(withIdentifier: "tab_bar") as? UITabBarController
             else { fatalError() }
         present(dashboardVC, animated: true, completion: nil)
     }
