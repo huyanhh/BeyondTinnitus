@@ -13,6 +13,8 @@ class DashboardViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    var manager = FrequencyManager.shared
+    
     fileprivate let sectionData = [" "]
     fileprivate let rowData = [["apple_music", "Play with Music"],
                            ["spotify", "Play with Spotify"],
@@ -22,9 +24,26 @@ class DashboardViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        if let savedManager = loadToneSettings() {
+            print("loading settings")
+            manager = savedManager
+            manager.setupAudioFiles()
+        } else { fatalError() }
     }
     
     @IBAction func toggleplay(_ sender: UIButton) {
+        if manager.wholeTone.isPlaying {
+            manager.stopAll()
+            sender.setImage(UIImage(named: "play"), for: .normal)
+        } else {
+            manager.playAll()
+            sender.setImage(UIImage(named: "pause"), for: .normal)
+        }
+    }
+    
+    private func loadToneSettings() -> FrequencyManager? {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: FrequencyManager.ArchiveURL.path) as? FrequencyManager
     }
 
 }
@@ -47,8 +66,8 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
 
-        cell.textLabel?.text = rowData[indexPath.row][1]
         cell.imageView?.image = UIImage(named: rowData[indexPath.row][0])
+        cell.textLabel?.text = rowData[indexPath.row][1]
         
         return cell
     }

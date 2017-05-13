@@ -17,9 +17,17 @@ class LoginViewController: UIViewController {
     fileprivate var backgroundTapGesture: UITapGestureRecognizer?
 
     @IBAction func signIn() {
-        guard let controller = self.storyboard?.instantiateViewController(withIdentifier: "main") as? UINavigationController
+        guard let onboardVC = self.storyboard?.instantiateViewController(withIdentifier: "main") as? UINavigationController
             else { fatalError() }
-        present(controller, animated: true, completion: nil)
+        guard let dashboardVC = self.storyboard?.instantiateViewController(withIdentifier: "dashboard") as? DashboardViewController
+            else { fatalError() }
+        
+//        if !UserDefaults.standard.bool(forKey: "onboard") {
+//            present(onboardVC, animated: true, completion: nil)
+//        } else {
+            present(dashboardVC, animated: true, completion: nil)
+//        }
+        
         let _ = FIRDatabase.database().reference()
         FIRAuth.auth()?.signIn(withEmail: uid.text!, password: pwd.text!){ (user, error) in
             // ...

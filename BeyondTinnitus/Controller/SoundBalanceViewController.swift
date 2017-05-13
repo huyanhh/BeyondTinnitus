@@ -8,10 +8,26 @@
 
 import UIKit
 import AVFoundation
+import os.log
 
 class SoundBalanceViewController: UIViewController {
 
     @IBOutlet weak var slider: UISlider!
+    @IBAction func presentDashboard() {
+        if FrequencyManager.shared.wholeTone.pan == 0 {
+            Utility.alert(message: "You haven't set your balance yet!", vc: self)
+            return
+        }
+        FrequencyManager.shared.stopAll()
+        saveToneSettings()
+        
+        UserDefaults.standard.set(true, forKey: "onboard")
+        UserDefaults.standard.synchronize()
+        
+        guard let dashboardVC = self.storyboard?.instantiateViewController(withIdentifier: "dashboard") as? DashboardViewController
+            else { fatalError() }
+        present(dashboardVC, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,14 +36,30 @@ class SoundBalanceViewController: UIViewController {
         slider.maximumValue = 1.0
         slider.value = 0.0
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         FrequencyManager.shared.stopAudioFile(tone: .sixteenth)
         FrequencyManager.shared.playAll()
     }
     
     @IBAction func sliderChanged(_ sender: UISlider) {
-        FrequencyManager.shared.wholeTone.pan = sender.value
-        FrequencyManager.shared.halfTone.pan = sender.value
-        FrequencyManager.shared.sixteenthTone.pan = sender.value
+        FrequencyManager.shared.wPan = sender.value
+        FrequencyManager.shared.hPan = sender.value
+        FrequencyManager.shared.sPan = sender.value
     }
-
+    
+    private func saveToneSettings() {
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(FrequencyManager.shared, toFile: FrequencyManager.ArchiveURL.path)
+        
+        if isSuccessfulSave {
+            print("meals saved")
+            os_log("Meals successfully saved.", log: OSLog.default, type: .debug)
+        } else {
+            print("failed")
+            os_log("Failed to save meals...", log: OSLog.default, type: .error)
+        }
+    }
 }

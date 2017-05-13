@@ -19,3 +19,11 @@ extension UIViewController {
         view.endEditing(true)
     }
 }
+
+struct Utility {
+    static func alert(message: String, vc: UIViewController) {
+        let alert = UIAlertController(title: "Whoops...", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+        vc.present(alert, animated: true, completion: nil)
+    }
+}

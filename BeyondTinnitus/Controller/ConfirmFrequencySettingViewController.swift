@@ -18,6 +18,8 @@ class ConfirmFrequencySettingViewController: UIViewController {
         if let frequency = tf {
             volumeVC.tf = Int(frequency)
             self.navigationController?.pushViewController(volumeVC, animated: true)
+        } else {
+            Utility.alert(message: "You haven't selected a tone yet!", vc: self)
         }
         if tone.isPlaying {
             engine.mainMixerNode.volume = 0.0

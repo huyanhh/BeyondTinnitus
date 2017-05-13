@@ -92,7 +92,6 @@
 		3B9F70911DE0C0A500D310DB /* SoundBalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F70901DE0C0A500D310DB /* SoundBalanceViewController.swift */; };
 		3B9F70931DE0C0B700D310DB /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F70921DE0C0B700D310DB /* DashboardViewController.swift */; };
 		3B9F70961DE0C13A00D310DB /* BeyondUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F70951DE0C13A00D310DB /* BeyondUIColor.swift */; };
-		3B9F709A1DE0C5E200D310DB /* MKTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F70991DE0C5E200D310DB /* MKTextField.swift */; };
 		3B9F709E1DE0DB0400D310DB /* WideButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F709D1DE0DB0400D310DB /* WideButton.swift */; };
 		3B9F70A01DE0DCDA00D310DB /* BeyondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F709F1DE0DCDA00D310DB /* BeyondView.swift */; };
 		3BFC23DE1DE4F66B00C99035 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFC23DD1DE4F66B00C99035 /* Utility.swift */; };
@@ -188,7 +187,6 @@
 		3B9F70901DE0C0A500D310DB /* SoundBalanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SoundBalanceViewController.swift; path = Controller/SoundBalanceViewController.swift; sourceTree = "<group>"; };
 		3B9F70921DE0C0B700D310DB /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardViewController.swift; path = Controller/DashboardViewController.swift; sourceTree = "<group>"; };
 		3B9F70951DE0C13A00D310DB /* BeyondUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BeyondUIColor.swift; path = Utility/BeyondUIColor.swift; sourceTree = "<group>"; };
-		3B9F70991DE0C5E200D310DB /* MKTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MKTextField.swift; path = View/MKTextField.swift; sourceTree = "<group>"; };
 		3B9F709D1DE0DB0400D310DB /* WideButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WideButton.swift; path = View/WideButton.swift; sourceTree = "<group>"; };
 		3B9F709F1DE0DCDA00D310DB /* BeyondView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BeyondView.swift; path = View/BeyondView.swift; sourceTree = "<group>"; };
 		3BFC23DD1DE4F66B00C99035 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = Utility/Utility.swift; sourceTree = "<group>"; };
@@ -295,7 +293,6 @@
 			isa = PBXGroup;
 			children = (
 				3B9F70951DE0C13A00D310DB /* BeyondUIColor.swift */,
-				3B9F70991DE0C5E200D310DB /* MKTextField.swift */,
 				9FAA3D4A1DE269D00056776E /* FontProxy.swift */,
 				3BFC23DD1DE4F66B00C99035 /* Utility.swift */,
 			);
@@ -582,7 +579,6 @@
 				3B2F3D3F1EA40E6800160C89 /* FrequencyCell.swift in Sources */,
 				3B2F3D391EA3FE2800160C89 /* FrequencyManager.swift in Sources */,
 				3BFC23DE1DE4F66B00C99035 /* Utility.swift in Sources */,
-				3B9F709A1DE0C5E200D310DB /* MKTextField.swift in Sources */,
 				3B9F708C1DE0C08100D310DB /* FrequencySettingViewController.swift in Sources */,
 				3B9F708A1DE0C05300D310DB /* LoginViewController.swift in Sources */,
 				3B9F708F1DE0C09B00D310DB /* VolumeAdjustViewController.swift in Sources */,

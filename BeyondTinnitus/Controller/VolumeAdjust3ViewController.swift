@@ -16,14 +16,20 @@ class VolumeAdjust3ViewController: UIViewController {
         super.viewDidLoad()
         slider.minimumValue = 0
         slider.maximumValue = 1
-        slider.value = 0.0
+        slider.value = FrequencyManager.shared.sVolume
+
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         FrequencyManager.shared.stopAudioFile(tone: .half)
         FrequencyManager.shared.playAudioFile(tone: .sixteenth)
     }
     
     @IBAction func sliderChanged(_ sender: UISlider) {
-        FrequencyManager.shared.sixteenthTone.volume = sender.value
+        FrequencyManager.shared.sVolume = sender.value
     }
 
 }
