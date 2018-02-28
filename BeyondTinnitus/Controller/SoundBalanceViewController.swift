@@ -19,7 +19,7 @@ class SoundBalanceViewController: UIViewController {
             return
         }
         FrequencyManager.shared.stopAll()
-        saveToneSettings()
+        FrequencyManager.shared.saveToneSettings()
         
         UserDefaults.standard.set(true, forKey: "onboard")
         UserDefaults.standard.synchronize()
@@ -49,17 +49,5 @@ class SoundBalanceViewController: UIViewController {
         FrequencyManager.shared.wPan = sender.value
         FrequencyManager.shared.hPan = sender.value
         FrequencyManager.shared.sPan = sender.value
-    }
-    
-    private func saveToneSettings() {
-        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(FrequencyManager.shared, toFile: FrequencyManager.ArchiveURL.path)
-        
-        if isSuccessfulSave {
-            print("meals saved")
-            os_log("Meals successfully saved.", log: OSLog.default, type: .debug)
-        } else {
-            print("failed")
-            os_log("Failed to save meals...", log: OSLog.default, type: .error)
-        }
     }
 }

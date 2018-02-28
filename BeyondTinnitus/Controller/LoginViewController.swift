@@ -22,16 +22,16 @@ class LoginViewController: UIViewController {
         guard let dashboardVC = self.storyboard?.instantiateViewController(withIdentifier: "tab_bar") as? UITabBarController
             else { fatalError() }
         
-//        if !UserDefaults.standard.bool(forKey: "onboard") {
-//            present(onboardVC, animated: true, completion: nil)
-//        } else {
+        if !UserDefaults.standard.bool(forKey: "onboard") {
+            present(onboardVC, animated: true, completion: nil)
+        } else {
             present(dashboardVC, animated: true, completion: nil)
-//        }
-        
-        let _ = FIRDatabase.database().reference()
-        FIRAuth.auth()?.signIn(withEmail: uid.text!, password: pwd.text!){ (user, error) in
-            // ...
         }
+      
+//        let _ = FIRDatabase.database().reference()
+//        FIRAuth.auth()?.signIn(withEmail: uid.text!, password: pwd.text!){ (user, error) in
+//            // ...
+//        }
     }
     
     override func viewDidLoad() {

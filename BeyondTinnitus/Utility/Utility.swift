@@ -27,3 +27,13 @@ struct Utility {
         vc.present(alert, animated: true, completion: nil)
     }
 }
+
+public struct BeyondTinnitusPurchase {
+  public static let FullSound = "com.beyondtinnitus.app.FullSound"
+  fileprivate static let productIdentifiers: Set<ProductIdentifier> = [BeyondTinnitusPurchase.FullSound]
+  public static let store = IAPHelper(productIds: BeyondTinnitusPurchase.productIdentifiers)
+}
+
+func resourceNameForProductIdentifier(_ productIdentifier: String) -> String? {
+  return productIdentifier.components(separatedBy: ".").last
+}

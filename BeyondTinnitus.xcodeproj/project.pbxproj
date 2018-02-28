@@ -12,7 +12,6 @@
 		3B2F3D391EA3FE2800160C89 /* FrequencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2F3D381EA3FE2800160C89 /* FrequencyManager.swift */; };
 		3B2F3D3B1EA40D3500160C89 /* VolumeAdjust2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2F3D3A1EA40D3500160C89 /* VolumeAdjust2ViewController.swift */; };
 		3B2F3D3D1EA40DD400160C89 /* VolumeAdjust3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2F3D3C1EA40DD400160C89 /* VolumeAdjust3ViewController.swift */; };
-		3B2F3D3F1EA40E6800160C89 /* FrequencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2F3D3E1EA40E6800160C89 /* FrequencyCell.swift */; };
 		3B32E04B1E05FF750025FE98 /* AVTonePlayerUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B32E04A1E05FF750025FE98 /* AVTonePlayerUnit.swift */; };
 		3B8E5F411E987AB0007CDAEE /* Tf-2000_AllBand.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5EFD1E987AB0007CDAEE /* Tf-2000_AllBand.mp4 */; };
 		3B8E5F421E987AB0007CDAEE /* Tf-2000_Band1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B8E5EFE1E987AB0007CDAEE /* Tf-2000_Band1.mp4 */; };
@@ -95,6 +94,10 @@
 		3B9F70961DE0C13A00D310DB /* BeyondUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F70951DE0C13A00D310DB /* BeyondUIColor.swift */; };
 		3B9F709E1DE0DB0400D310DB /* WideButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F709D1DE0DB0400D310DB /* WideButton.swift */; };
 		3B9F70A01DE0DCDA00D310DB /* BeyondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F709F1DE0DCDA00D310DB /* BeyondView.swift */; };
+		3BC597431FF330F200C20FF6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BC597421FF330F200C20FF6 /* StoreKit.framework */; };
+		3BC597451FF3332000C20FF6 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC597441FF3332000C20FF6 /* IAPHelper.swift */; };
+		3BC597471FF339E100C20FF6 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC597461FF339E100C20FF6 /* ProductCell.swift */; };
+		3BC597491FF33D9500C20FF6 /* FrequencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC597481FF33D9400C20FF6 /* FrequencyCell.swift */; };
 		3BFC23DE1DE4F66B00C99035 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFC23DD1DE4F66B00C99035 /* Utility.swift */; };
 		9F78AE851DE3C89F005201BB /* CreateAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F78AE841DE3C89F005201BB /* CreateAccountController.swift */; };
 		9FAA3D4B1DE269D00056776E /* FontProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAA3D4A1DE269D00056776E /* FontProxy.swift */; };
@@ -102,11 +105,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3B2E1DF81EC6AC4800ADDEE5 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = Controller/SettingsViewController.swift; sourceTree = "<group>"; };
+		3B2E1DF81EC6AC4800ADDEE5 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = Controller/SettingsViewController.swift; sourceTree = "<group>"; tabWidth = 2; };
 		3B2F3D381EA3FE2800160C89 /* FrequencyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FrequencyManager.swift; path = Model/FrequencyManager.swift; sourceTree = "<group>"; };
 		3B2F3D3A1EA40D3500160C89 /* VolumeAdjust2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VolumeAdjust2ViewController.swift; path = Controller/VolumeAdjust2ViewController.swift; sourceTree = "<group>"; };
 		3B2F3D3C1EA40DD400160C89 /* VolumeAdjust3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VolumeAdjust3ViewController.swift; path = Controller/VolumeAdjust3ViewController.swift; sourceTree = "<group>"; };
-		3B2F3D3E1EA40E6800160C89 /* FrequencyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FrequencyCell.swift; path = View/FrequencyCell.swift; sourceTree = "<group>"; };
 		3B32E04A1E05FF750025FE98 /* AVTonePlayerUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AVTonePlayerUnit.swift; path = Model/AVTonePlayerUnit.swift; sourceTree = "<group>"; };
 		3B8E5EFD1E987AB0007CDAEE /* Tf-2000_AllBand.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-2000_AllBand.mp4"; sourceTree = "<group>"; };
 		3B8E5EFE1E987AB0007CDAEE /* Tf-2000_Band1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tf-2000_Band1.mp4"; sourceTree = "<group>"; };
@@ -191,6 +193,10 @@
 		3B9F70951DE0C13A00D310DB /* BeyondUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BeyondUIColor.swift; path = Utility/BeyondUIColor.swift; sourceTree = "<group>"; };
 		3B9F709D1DE0DB0400D310DB /* WideButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WideButton.swift; path = View/WideButton.swift; sourceTree = "<group>"; };
 		3B9F709F1DE0DCDA00D310DB /* BeyondView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BeyondView.swift; path = View/BeyondView.swift; sourceTree = "<group>"; };
+		3BC597421FF330F200C20FF6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		3BC597441FF3332000C20FF6 /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
+		3BC597461FF339E100C20FF6 /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		3BC597481FF33D9400C20FF6 /* FrequencyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrequencyCell.swift; sourceTree = "<group>"; };
 		3BFC23DD1DE4F66B00C99035 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = Utility/Utility.swift; sourceTree = "<group>"; };
 		41AE24CF397F787A8726DA58 /* Pods-BeyondTinnitus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeyondTinnitus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeyondTinnitus/Pods-BeyondTinnitus.debug.xcconfig"; sourceTree = "<group>"; };
 		871D7F10BA30E569F4501BF6 /* Pods-BeyondTinnitus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeyondTinnitus.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeyondTinnitus/Pods-BeyondTinnitus.release.xcconfig"; sourceTree = "<group>"; };
@@ -206,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BCC2546AEFFFF890BAF348A /* Pods_BeyondTinnitus.framework in Frameworks */,
+				3BC597431FF330F200C20FF6 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +222,7 @@
 		170180071623BD5CEFAD0511 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3BC597421FF330F200C20FF6 /* StoreKit.framework */,
 				E75C496BD7ACEF8F38573D54 /* Pods_BeyondTinnitus.framework */,
 			);
 			name = Frameworks;
@@ -268,9 +276,10 @@
 		3B9F70871DE0C04000D310DB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3BC597481FF33D9400C20FF6 /* FrequencyCell.swift */,
+				3BC597461FF339E100C20FF6 /* ProductCell.swift */,
 				3B9F709D1DE0DB0400D310DB /* WideButton.swift */,
 				3B9F709F1DE0DCDA00D310DB /* BeyondView.swift */,
-				3B2F3D3E1EA40E6800160C89 /* FrequencyCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -295,6 +304,7 @@
 		3B9F70941DE0C12900D310DB /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				3BC597441FF3332000C20FF6 /* IAPHelper.swift */,
 				3B9F70951DE0C13A00D310DB /* BeyondUIColor.swift */,
 				9FAA3D4A1DE269D00056776E /* FontProxy.swift */,
 				3BFC23DD1DE4F66B00C99035 /* Utility.swift */,
@@ -421,8 +431,16 @@
 				TargetAttributes = {
 					3B9F706E1DE0BE1300D310DB = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = MNJCBYM2DC;
+						DevelopmentTeam = 9HN92NV44T;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -579,7 +597,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B2F3D3F1EA40E6800160C89 /* FrequencyCell.swift in Sources */,
+				3BC597491FF33D9500C20FF6 /* FrequencyCell.swift in Sources */,
 				3B2F3D391EA3FE2800160C89 /* FrequencyManager.swift in Sources */,
 				3BFC23DE1DE4F66B00C99035 /* Utility.swift in Sources */,
 				3B9F708C1DE0C08100D310DB /* FrequencySettingViewController.swift in Sources */,
@@ -587,9 +605,11 @@
 				3B2E1DF91EC6AC4800ADDEE5 /* SettingsViewController.swift in Sources */,
 				3B9F708F1DE0C09B00D310DB /* VolumeAdjustViewController.swift in Sources */,
 				3B2F3D3B1EA40D3500160C89 /* VolumeAdjust2ViewController.swift in Sources */,
+				3BC597451FF3332000C20FF6 /* IAPHelper.swift in Sources */,
 				3B9F70731DE0BE1300D310DB /* AppDelegate.swift in Sources */,
 				3B32E04B1E05FF750025FE98 /* AVTonePlayerUnit.swift in Sources */,
 				9F78AE851DE3C89F005201BB /* CreateAccountController.swift in Sources */,
+				3BC597471FF339E100C20FF6 /* ProductCell.swift in Sources */,
 				3B9F709E1DE0DB0400D310DB /* WideButton.swift in Sources */,
 				3B2F3D3D1EA40DD400160C89 /* VolumeAdjust3ViewController.swift in Sources */,
 				3B8E5F861E987C4D007CDAEE /* ConfirmFrequencySettingViewController.swift in Sources */,
@@ -723,10 +743,10 @@
 			baseConfigurationReference = 41AE24CF397F787A8726DA58 /* Pods-BeyondTinnitus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = MNJCBYM2DC;
+				DEVELOPMENT_TEAM = 9HN92NV44T;
 				INFOPLIST_FILE = BeyondTinnitus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.beyondtinnitus.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = com.beyondtinnitus.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -737,10 +757,10 @@
 			baseConfigurationReference = 871D7F10BA30E569F4501BF6 /* Pods-BeyondTinnitus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = MNJCBYM2DC;
+				DEVELOPMENT_TEAM = 9HN92NV44T;
 				INFOPLIST_FILE = BeyondTinnitus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.beyondtinnitus.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = com.beyondtinnitus.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
